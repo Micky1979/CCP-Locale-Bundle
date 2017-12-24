@@ -1,0 +1,740 @@
+/*
+ Base.strings
+ Localized
+ 
+ Created by Micky1979 on 23/09/2017.
+ Copyright © 2017 M79 Software. All rights reserved.
+ */
+
+/* Application Menu */
+/* ----------------- */
+"About Clover Configurator Pro" = "About Clover Configurator Pro";
+"Preferences…" = "Preferences…";
+"Check for updates" = "Check for updates";
+"Services" = "Services";
+"No Services Apply" = "No Services Apply";
+"Hide Clover Configurator Pro" = "Hide Clover Configurator Pro";
+"Hide Others" = "Hide Others";
+"Show All" = "Show All";
+"Quit Clover Configurator Pro" = "Quit Clover Configurator Pro";
+/* ----------------- */
+"Clover Configurator Pro always keeps Build_Clover.command up to date and is located at \"%@/CCP/\" by this application.\nIf you're used to place Clover's source code in a different location than ~/src (the default location), click on \"Close\" otherwise that will be used.\n\nIf this is the first time you use Build_Clover.command remember that Xcode has to be installed!" = "Clover Configurator Pro always keeps Build_Clover.command up to date and is located at \"%@/CCP/\" by this application.\nIf you're used to place Clover's source code in a different location than ~/src (the default location), click on \"Close\" otherwise that will be used.\n\nIf this is the first time you use Build_Clover.command remember that Xcode has to be installed!";
+/* ----------------- */
+"File" = "File";
+"New" = "New";
+"Open…" = "Open…";
+"Open Recent" = "Open Recent";
+"Clear Menu" = "Clear Menu";
+"Close" = "Close";
+"<<Close All - unlocalized>>" = "Close All";
+"Save…" = "Save…";
+"Save As…" = "Save As…";
+"Revert to Saved" = "Revert to Saved";
+"Page Setup…" = "Page Setup…";
+"Print…" = "Print…";
+/* ----------------- */
+"Edit" = "Edit";
+"Undo" = "Undo";
+"Redo" = "Redo";
+"Cut" = "Cut";
+"Copy" = "Copy";
+"Paste" = "Paste";
+"Paste and Match Style" = "Paste and Match Style";
+"Delete" = "Delete";
+"Select All" = "Select All";
+
+"Find" = "Find";
+"Find…" = "Find…";
+"Find and Replace…" = "Find and Replace…";
+"Find Next" = "Find Next";
+"Find Previous" = "Find Previous";
+"Use Selection for Find" = "Use Selection for Find";
+"Jump to Selection" = "Jump to Selection";
+"Spelling and Grammar" = "Spelling and Grammar";
+"Spelling" = "Spelling";
+"Show Spelling and Grammar" = "Show Spelling and Grammar";
+"Check Document Now" = "Check Document Now";
+
+"Check Spelling While Typing" = "Check Spelling While Typing";
+"Check Grammar With Spelling" = "Check Grammar With Spelling";
+"Correct Spelling Automatically" = "Correct Spelling Automatically";
+"Substitutions" = "Substitutions";
+"Show Substitutions" = "Show Substitutions";
+
+"Smart Copy/Paste" = "Smart Copy/Paste";
+"Smart Quotes" = "Smart Quotes";
+"Smart Dashes" = "Smart Dashes";
+"Smart Links" = "Smart Links";
+"Data Detectors" = "Data Detectors";
+"Text Replacement" = "Text Replacement";
+"Transformations" = "Transformations";
+"Make Upper Case" = "Make Upper Case";
+"Make Lower Case" = "Make Lower Case";
+"Capitalize" = "Capitalize";
+"Speech" = "Speech";
+"Start Speaking" = "Start Speaking";
+"Stop Speaking" = "Stop Speaking";
+
+"Start Dictation…" = "Start Dictation…";
+"Emoji & Symbols" = "Emoji & Symbols";
+"Format" = "Format";
+"Font" = "Font";
+"Show Fonts" = "Show Fonts";
+"Bold" = "Bold";
+"Italic" = "Italic";
+"Underline" = "Underline";
+
+"Bigger" = "Bigger";
+"Smaller" = "Smaller";
+
+"Kern" = "Kern";
+"Use Default" = "Use Default";
+"Use None" = "Use None";
+"Tighten" = "Tighten";
+"Loosen" = "Loosen";
+"Ligatures" = "Ligatures";
+"Use All" = "Use All";
+"Baseline" = "Baseline";
+"Superscript" = "Superscript";
+"Subscript" = "Subscript";
+"Raise" = "Raise";
+"Lower" = "Lower";
+
+"Show Colors" = "Show Colors";
+
+"Copy Style" = "Copy Style";
+"Paste Style" = "Paste Style";
+"Text" = "Text";
+"Align Left" = "Align Left";
+"Center" = "Center";
+"Justify" = "Justify";
+"Align Right" = "Align Right";
+
+"Writing Direction" = "Writing Direction";
+"Paragraph" = "Paragraph";
+"    Default" = "    Default";
+"    Left to Right" = "    Left to Right";
+"    Right to Left" = "    Right to Left";
+
+"Selection" = "Selection";
+"Show Ruler" = "Show Ruler";
+"Copy Ruler" = "Copy Ruler";
+"Paste Ruler" = "Paste Ruler";
+"View" = "View";
+"Show Toolbar" = "Show Toolbar";
+
+"Show Sidebar" = "Show Sidebar";
+"Enter Full Screen" = "Enter Full Screen";
+"Window" = "Window";
+"Minimize" = "Minimize";
+"Zoom" = "Zoom";
+
+"Bring All to Front" = "Bring All to Front";
+"Help" = "Help";
+"Clover Configurator Pro Help" = "Clover Configurator Pro Help";
+/* ----------------- */
+"download and build Clover using Build_Clover.command" = "download and build Clover using Build_Clover.command";
+"open Build_Clover.command" = "open Build_Clover.command";
+"edit BuildCloverConfig.txt" = "edit BuildCloverConfig.txt";
+/* ----------------- */
+/* Untitled, no title for a new document */
+"Untiteled" = "Untiteled";
+
+/* Search in your language. */
+"Search" = "Search";
+
+/* OK in your language. */
+"OK" = "OK";
+
+/* Replace in your language. Used in the Find And Replace view */
+"Replace" = "Replace";
+
+/* ask if you are sure of any of your actions you are attempting to do */
+"Sure?" = "Sure?";
+/* copy to paste board */
+"copy to paste board" = "copy to paste board";
+
+/* Tags for the plist */
+"Unsupported" = "Unsupported";
+"Dictionary"  = "Dictionary";
+"Array"       = "Array";
+"String"      = "String";
+"Number"      = "Number";
+"Bool"        = "Bool";
+"Date"        = "Date";
+"Data"        = "Data";
+"YES"         = "YES";
+"NO"         = "NO";
+
+
+/* "Key/Type/Value" are column header name for the plist editor */
+"Key" = "Key";
+"Type" = "Type";
+"Value" = "Value";
+
+/* Item, singular */
+"Item" = "Item";
+/* Items, plural */
+"Items" = "Items";
+
+/* New Item for the plist */
+"New Item" = "New Item";
+
+/* bytes, like 00abff00, hex representation */
+"bytes" = "bytes";
+
+// Undo and Redo -----------------------------------------------------------------------------------------------
+/* You will see \"Undo/Redo typing\" after typing something under \"Value\" column */
+"typing" = "typing";
+
+/* You will see "Undo/Redo change type" after changing the type under "Type" column (String to Number, String to Dictionary and so on..) */
+"change type" = "change type";
+
+/* You will see "Undo/Redo change bool value" after editing a bool value under "Value" column */
+"change bool value" = "change bool value";
+
+/* You will see "Undo/Redo replace duplicate key" after editing a Dictionary's key and the app ask you you to replace an existing one.
+ This under "Key" column */
+"replace duplicate key" = "replace duplicate key";
+
+/* You will see "Undo/Redo move item" after moving an Item elsewhere */
+"move item" = "move item";
+
+/* You will see \"Undo/Redo paste Item\" after paste an Item somewhere */
+"paste Item" = "paste Item";
+
+/* You will see "Undo/Redo remove Item" after removing an Item */
+"remove Item" = "remove Item";
+
+/* You will see "Undo/Redo cut Item" after cutting an Item */
+"cut Item" = "cut Item";
+
+/* You will see "Undo/Redo add new Item" after adding an new Item */
+"add new Item" = "add new Item";
+// -------------------------------------------------------------------------------------------------------------
+
+
+// localized strings for the alerts indicating that something is wrong -----------------------------------------
+//MARK: localized strings for the alerts indicating that something is wrong
+//MARK: localized strings for the alerts indicating that we are typing invalid bytes under Data tag
+// -----------------------------------------------------------------------------------------------------------------------------------------------------
+// the 3 string below is for an alert that indicate you that you are attempting to have a duplicate key in the same Dictionary that is not allowed
+
+/* title for the alert */
+"Duplicate key in the Dictionary!" = "Duplicate key in the Dictionary!";
+/* informative text for the alert */
+"\"%@\" is already present in the Dictionary,\nDo you want to undo the editing or replace the existing key?" = "\"%@\" is already present in the Dictionary,\nDo you want to undo the editing or replace the existing key?";
+/* text for the buttons of this alert indicating that you want replace the existing key */
+"Replace existing key" = "Replace existing key";
+// -----------------------------------------------------------------------------------------------------------------------------------------------------
+/* Showned in a alert window when you are attempting to insert a bad value. Mostly bad hex value under Data tag (or not enclosed in <>), or a bad Date that cannot be recognized, or you edit is not compatible with the current tag */
+
+/* Title of the alert */
+"Invalid value detected!" = "Invalid value detected!";
+
+/* informative text for the alert */
+"Your edit is not valid,\nDo you want to restore last valid value or keep editing?" = "Your edit is not valid,\nDo you want to restore last valid value or keep editing?";
+// -----------------------------------------------------------------------------------------------------------------------------------------------------
+
+// hide/show windows under the "View" menu     ---------------------------------------------------------------------------------------------------------
+
+/* Hide the base64 converter window under the View-menu */
+"Hide base64 <-> hex converter" = "Hide base64 <-> hex converter";
+
+/* Show the base64 converter window under the View-menu */
+"Show base64 <-> hex converter" = "Show base64 <-> hex converter";
+
+/* Hide the boot log window under the View-menu */
+"Hide boot log" = "Hide boot log";
+
+/* Show the boot log window under the View-menu */
+"Show boot log" = "Show boot log";
+
+/* Shown in the base64 converter window. Little space: needs a short title */
+"encode" = "encode";
+
+/* Shown in the base64 converter window. Little space: needs a short title */
+"decode" = "decode";
+
+/* Shown in the base64 converter window. Little space: needs a short title */
+"string" = "string";
+
+/* Shown in the base64 converter window. Little space: needs a short title */
+"HEX" = "HEX";
+
+/* Shown in some converter window. Little space: needs a short title */
+"convert" = "convert";
+
+/* a base64 string to be converted. Shown in the base64 converter window. */
+"base64 string to be converted" = "base64 string to be converted";
+
+/* we expect a hex string after the conversion. Shown in the base64 converter window. */
+"expected: hex value" = "expected: hex value";
+
+/* we expect a string after the conversion. Shown in the base64 converter window. */
+"expected: a string" = "expected: a string";
+
+/* a hex string to be converted. Shown in the base64 converter window. */
+"hex string to be converted" = "hex string to be converted";
+
+/* we expect a base64 string after the conversion. Shown in the base64 converter window. */
+"expected: a base64 string" = "expected: a base64 string";
+
+/* a string to be converted. Shown in the base64 converter window. */
+"any string to be converted" = "any string to be converted";
+
+
+/* Hide the Clover Manager window under the View-menu */
+"Hide Clover Manager" = "Hide Clover Manager";
+
+/* Show the Clover Manager window under the View-menu */
+"Show Clover Manager" = "Show Clover Manager";
+
+/* Hide the text to Data window under the View-menu */
+"Hide Text <-> Data converter" = "Hide Text <-> Data converter";
+
+/* Show the text to Data window under the View-menu */
+"Show Text <-> Data converter" = "Show Text <-> Data converter";
+
+/* Hide the NVRAM editor under the View-menu */
+"Hide NVRAM editor" = "Hide NVRAM editor";
+
+/* Show the NVRAM editor under the View-menu */
+"Show NVRAM editor" = "Show NVRAM editor";
+
+/* Hide the description window under the View-menu */
+"Hide descriptions" = "Hide descriptions";
+
+/* Show the description window under the View-menu */
+"Show description" = "Show description";
+
+/* indicate that no description is available for the selected entry */
+"No description available" = "No description available";
+// -----------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Config plist editor specific ------------------------------------------------------------------------------------------------------------------------
+
+/* you are attempting to set a new config key with an empty Data tag */
+"+ empty Data tag to be filled" = "+ empty Data tag to be filled";
+
+/* you are attempting to set a new config key with an empty string */
+"+ empty string to be filled" = "+ empty string to be filled";
+
+/* you are attempting to set a new config key with an empty array */
+"+ empty array to be filled" = "+ empty array to be filled";
+
+/* you are attempting to set a new dictionary under Devices->AddProperties to be filled with your values (Device, Key and Value) */
+"+ dictionary for DropTables to be filled (Signature, TableId (optional), Length (optional))" = "+ dictionary for DropTables to be filled (Signature, TableId (optional), Length (optional))";
+
+/* you are attempting to set a new DSDT patch to be filled with your values (Comment, Find, Replace, Disable) */
+"+ patch to be filled (Comment, Find, Replace, Disable)" = "+ patch to be filled (Comment, Find, Replace, Disable)";
+
+/* you are attempting to set a new dictionary under Devices->AddProperties to be filled with your values (Device, Key and Value) */
+"+ property to be filled (Device, Key, Value)" = "+ property to be filled (Device, Key, Value)";
+
+/* you are attempting to set a new dictionary under Graphics->PatchVBiosBytes to be filled with your values (Find and Replace) */
+"+ PatchVBiosBytes (Find and Replace)" = "+ PatchVBiosBytes (Find and Replace)";
+
+/* you are attempting to set a new dictionary under Graphics->NVIDIA to be filled with your values
+ (IOPCIPrimaryMatch, IOPCISubDevId, LoadVBios, Model, VRAM and VideoPorts) */
+"+ NVIDIA dictionary to be edited (IOPCIPrimaryMatch, IOPCISubDevId, LoadVBios, Model, VRAM and VideoPorts)" = "+ NVIDIA dictionary to be edited (IOPCIPrimaryMatch, IOPCISubDevId, LoadVBios, Model, VRAM and VideoPorts)";
+
+/* you are attempting to set a new dictionary under Graphics->ATI to be filled with your values
+ (IOPCIPrimaryMatch, IOPCISubDevId, LoadVBios, Model, VRAM and VideoPorts) */
+"+ AMD/ATI dictionary to be edited (IOPCIPrimaryMatch, IOPCISubDevId, LoadVBios, Model, VRAM and VideoPorts)" = "+ AMD/ATI dictionary to be edited (IOPCIPrimaryMatch, IOPCISubDevId, LoadVBios, Model, VRAM and VideoPorts)";
+
+/* you are attempting to set a new dictionary under KernelAndKextsPatches->KextsToPatch to be filled with your values (Name, Comment, Find, Replace) */
+"+ KextsToPatch dictionary to be filled (Name, Comment, Find, Replace)" = "+ KextsToPatch dictionary to be filled (Name, Comment, Find, Replace)";
+
+/* you are attempting to set a new dictionary under GUI->Custom->Legacy */
+"+ GUI->Custom->Legacy->Dictionary to be filled" = "+ GUI->Custom->Legacy->Dictionary to be filled";
+
+/* you are attempting to set a new dictionary under GUI->Custom->Tool */
+"+ GUI->Custom->Tool->Dictionary to be filled" = "+ GUI->Custom->Tool->Dictionary to be filled";
+
+/* you are attempting to set a new dictionary under GUI->Custom->Entries */
+"+ GUI->Custom->Entries->Dictionary to be filled" = "+ GUI->Custom->Entries->Dictionary to be filled";
+
+/* following are shown in the Entries/Legacy/Tool editors */
+"Alternate" = "Alternate";
+
+"Theme" = "Theme";
+
+"None" = "None";
+
+"OSXInstaller" = "OSXInstaller";
+"OSXRecovery" = "OSXRecovery";
+"LinuxKernel" = "LinuxKernel";
+
+"Other" = "Other";
+
+"Linux kernel Newest" = "Linux kernel Newest";
+"Linux kernel Oldest" = "Linux kernel Oldest";
+"Linux kernel First" = "Linux kernel First";
+"Linux kernel Last" = "Linux kernel Last";
+"Linux kernel Most Recent" = "Linux kernel Most Recent";
+"Linux kernel Earliest" = "Linux kernel Earliest";
+
+"Internal" = "Internal";
+"External" = "External";
+"Optical" = "Optical";
+"Detect" = "Detect";
+"Always" = "Always";
+"Disabled" = "Disabled";
+"Ignore" = "Ignore";
+"No Cache" = "No Cache";
+
+/* following are shown inside a notification when you add something to the config.plist with right click */
+
+"Bad Root node" = "Bad Root node";
+"Root node must be a Dictionary" = "Root node must be a Dictionary";
+
+"value must be changed to a real one!" = "value must be changed to a real one!";
+"Signature is required, TableId and Length optionals" = "Signature is required, TableId and Length optionals";
+"Find/Replace required, Comment/Disabled optionals" = "Find/Replace required, Comment/Disabled optionals";
+"Value can be Number/String/Data" = "Value can be Number/String/Data";
+"to be filled with real informations.." = "to be filled with real informations..";
+"MatchOS/MatchBuild/Disabled/InfoPlistPatch are optionals" = "MatchOS/MatchBuild/Disabled/InfoPlistPatch are optionals";
+// -----------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Clover Manager --------------------------------------------------------------------------------------------------------------------------------------
+/* don't umount the selected disk. This is asked in an alert window. A possible translation can be also "do nothing" or "go back". */
+"don't un mount" = "don't un mount";
+
+/* This is a filter: you will see only ESPs (if any) */
+"Show ESPs only" = "Show ESPs only";
+
+/* This is a filter: you will see partitions only */
+"Show Partitions only" = "Show Partitions only";
+
+/* This is a filter: you will see only mounted partitions */
+"Show mounted only" = "Show mounted only";
+
+/* open the mount point for the selected disk (must be mounted already) */
+"open" = "open";
+
+/* force un mount a volume */
+"force" = "force";
+
+/* This is asked in an alert window, and you are sure you want to unmount the selected device */
+"un mount" = "un mount";
+
+/* mount a disk */
+"mount" = "mount";
+
+/* This is asked in an alert window when you try to un mount a volume that looks marked as auto mount (ones internals that macOS auto-mount as start-up)
+ and potentially can cause problems.*/
+
+"The selected disk looks like marked as \"auto mount\" and can have ongoing processes by macOS.\nUnmounting it can cause the loss of datas for some applications if some files are in use by them.\nWithout using the \"force\" option this probably will not happen and the disk will not be un mounted." = "The selected disk looks like marked as \"auto mount\" and can have ongoing processes by macOS.\nUnmounting it can cause the loss of datas for some applications if some files are in use by them.\nWithout using the \"force\" option this probably will not happen and the disk will not be un mounted.";
+
+/* no mount point for the selected disk object */
+"Not mounted" = "Not mounted";
+
+/* Menu item containings all found config.plist in a EFI folder */
+"load config" = "load config";
+
+/* Menu item in the Clover Manager, if pressed will open the Clover Installer for the selected disk */
+"open Clover Installer" = "open Clover Installer";
+
+/* may be asked before the Clover's installer is shown */
+"Sorry you can't install Clover:\n\n- Un check \"Use your custom build..\" in the preferences.\n\n..or\n\n- build Clover!" = "Sorry you can't install Clover:\n\n- Un check \"Use your custom build..\" in the preferences.\n\n..or\n\n- build Clover!";
+
+/* may be asked before the Clover's installer is shown */
+"You can install Clover in this disk in UEFI mode,\nbut also in legacy mode (CloverEFI).\n\nIf you want to Install Clover in legacy mode and is the first time, ensure that one of boot0af or boot0ss, is selected:\n\nby desing only you decide if you want change your bootsectors and also because when this has already been done before, there is no reason to do so again.\n\nWARN:\nIf this is a supported Mac, please don't do that targeting an internal partition, but instead on an external disk. For the same reason don't install rc scripts on all volumes, but instead on the target only!" = "You can install Clover in this disk in UEFI mode,\nbut also in legacy mode (CloverEFI).\n\nIf you want to Install Clover in legacy mode and is the first time, ensure that one of boot0af or boot0ss, is selected:\n\nby desing only you decide if you want change your bootsectors and also because when this has already been done before, there is no reason to do so again.\n\nWARN:\nIf this is a supported Mac, please don't do that targeting an internal partition, but instead on an external disk. For the same reason don't install rc scripts on all volumes, but instead on the target only!";
+
+/* may be asked before the Clover's installer is shown */
+"You can install only Clover's extras on this disk,\nbut not the bootloader due to filesystem incompatibility" = "You can install only Clover's extras on this disk,\nbut not the bootloader due to filesystem incompatibility";
+// -----------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Clover Updater --------------------------------------------------------------------------------------------------------------------------------------
+/* shown in the Clover installer, it's the title of the first header */
+"Object" = "Object";
+
+/* shown in the Clover installer, it's the title of the second header */
+"Action" = "Action";
+
+/* shown in the Clover installer, it's the title of the third header */
+"Size" = "Size";
+
+/* shown in the Clover installer when you are installing something for the first time */
+"Install" = "Install";
+
+/* shown in the Clover installer when you are installing something that already exist */
+"Update" = "Update";
+
+/* shown in the Clover installer when a choice isn't selected */
+"Skip" = "Skip";
+
+
+/* shown in the Clover Updater when you have to update Clover or is the first time you do this */
+
+/* ..an error happened during the download. this can be reused somewhere else */
+"Error" = "Error";
+
+/* ..the downloaded archive is not good */
+"Damaged archive" = "Damaged archive";
+
+
+/* sec = seconds. abbreviation for unit of measure for seconds. This is shown during the download example:
+ 4,1MB of 10,1MB (450KB/sec)
+ */
+"sec" = "sec";
+
+/* used in "4,1MB of 10,1MB (450KB/sec)" */
+"of" = "of";
+
+"Clover is ready to be downloaded,\n\nbut you can also use your custom build if you have one. I this case look at the preference's menu and specify the path to your src folder and Clover Configurator Pro never will ask you this!\n\nNote:\nAt the app menu you can select \"Build_Clover\" to build Clover from source with Build_Clover.command:\nrequire an active internet connection and Xcode installed.. and Clover will be always up to date!" = "Clover is ready to be downloaded,\n\nbut you can also use your custom build if you have one. I this case look at the preference's menu and specify the path to your src folder and Clover Configurator Pro never will ask you this!\n\nNote:\nAt the app menu you can select \"Build_Clover\" to build Clover from source with Build_Clover.command:\nrequire an active internet connection and Xcode installed.. and Clover will be always up to date!";
+
+
+// -----------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Boot Log --------------------------------------------------------------------------------------------------------------------------------------------
+"zip as ~/Desktop/boot-log.zip" = "zip as ~/Desktop/boot-log.zip";
+// -----------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Preferences panel -----------------------------------------------------------------------------------------------------------------------------------
+//MARK: Preferences panel
+/* Title of the Preferences window */
+"Preferences" = "Preferences";
+
+/* checkbox under the Preferences. If enabled the app will try to locate the config.plist loaded by Clover at boot
+ (even if inside an unmounted partition) */
+"Try to load the confi.plist used by Clover to boot" = "Try to load the confi.plist used by Clover to boot";
+
+/* checkbox under the Preferences. If enabled the app will search for your ~/src containings Clover. You canspecify a different path */
+"Use your Clover source installing Clover (~/src by default)" = "Use your Clover source installing Clover (~/src by default)";
+
+/* button under the Preferences. Click it to find an alteranive src folder containing edk2 and clover source.
+ This button is little so also the title must be little */
+"set" = "set";
+
+/* checkbox under the Preferences. If enabled any plist you edit will be autosaved without asking for confirmation */
+"Enable auto save of the documents" = "Enable auto save of the documents";
+
+/* checkbox under the Preferences. If enabled tags (Dictionary, Array, String, Number, Boolean, Date, Data) are localized, english otherwise */
+"Use localized strings also for tags. Applied on next run." = "Use localized strings also for tags. Applied on next run.";
+
+/* checkbox under the Preferences. If enabled (take effect on next run) the app will be a simpli plist editor with no functionalities for Clover */
+"Load Clover Configurator Pro.app as a normal plist Editor (no Clover facilities)" = "Load Clover Configurator Pro.app as a normal plist Editor (no Clover facilities)";
+
+/* checkbox under the Preferences. If enabled (take effect on next run) the app will do a backup before install Clover */
+"Make a backup of the EFI folder before install Clover" = "Make a backup of the EFI folder before install Clover";
+
+/* label under the Preferences. It's just before the button where you can set the copies of backups to holds.
+ Is a little label, please use a short description */
+"Max copies:" = "Max copies:";
+
+/* checkbox under the Preferences. If enabled (take effect on next run) the app will have a dark appearance */
+"Start in dark mode. Applied on next run." = "Start in dark mode. Applied on next run.";
+
+/* checkbox under the Preferences.
+ If enabled the app can show notifications on the upper right corner to help the user with reminders
+ about some functionality for the config.plist
+ */
+"Allow on screen notifications (upper right corner) if a need be" = "Allow on screen notifications (upper right corner) if a need be";
+
+/* static labels under the Preferences. */
+"Editor rules" = "Editor rules";
+"Clover rules" = "Clover rules";
+
+// NVRAM Editor -----------------------------------------------------------------------------------------------------------------------------------
+/* label under the nvram editor (left side) */
+"Editor" = "Editor";
+
+/* label under the nvram editor (right side) */
+"IODeviceTree/options (NVRAM, read only)" = "IODeviceTree/options (NVRAM, read only)";
+
+/* title of the "ignore csr-active-config" button in the the NVRAM editor  */
+"ignore csr-active-config" = "ignore csr-active-config";
+
+/* title of the "clear NVRAM" button in the the NVRAM editor  */
+"clear NVRAM" = "clear NVRAM";
+
+/* Title of the Alert that shown when you open the NVRAM editor  */
+"Usage" = "Usage";
+
+/* message of the Alert that shown when you open the NVRAM editor  */
+"Clover Configurator Pro is able to set your NVRAM by editing the editor at the left side.\nOn the right side is what currently is on IODeviceTree/options (i.e. the NVRAM) and is not editable.\n\nLIMITATIONS:\nkeys like \"csr-active-config\" may be not editable due to the SIP settings. If that happens an alert will popup with an error after pressing the \"set\" button. To avoid that, temporarily disable SIP in recovery mode or set a permissive value in config.plist (RtVariables->CsrActiveConfig->). You can also skip it by mark as active \"ignore csr-active-config\" but anyway macOS can deny adding/setting or deleting other keys." = "Clover Configurator Pro is able to set your NVRAM by editing the editor at the left side.\nOn the right side is what currently is on IODeviceTree/options (i.e. the NVRAM) and is not editable.\n\nLIMITATIONS:\nkeys like \"csr-active-config\" may be not editable due to the SIP settings. If that happens an alert will popup with an error after pressing the \"set\" button. To avoid that, temporarily disable SIP in recovery mode or set a permissive value in config.plist (RtVariables->CsrActiveConfig->). You can also skip it by mark as active \"ignore csr-active-config\" but anyway macOS can deny adding/setting or deleting other keys.";
+
+
+
+// Following coming directly from Clover source so if already in your language
+// please leave as is!
+// ============================================================================
+// Installation
+// ----------------------------------------------------------------------------
+"UEFI.only_title" = "僅安裝 UEFI 開機版本";
+"UEFI.only_description" = "僅安裝 UEFI 主機板專用的 Clover 版本";
+
+// ============================================================================
+// Target
+// ----------------------------------------------------------------------------
+"Target.ESP_title" = "安裝 Clover 到 EFI 系統區";
+"Target.ESP_description" = "安裝 Clover 到目標磁區的 EFI 系統區
+
+需要在 Mac 下，先將 EFI 系統區 格式化為 Fat32 格式。
+
+參考 Fat32 手動格式化指令:
+diskutil list
+newfs_msdos -v EFI -F 32 /dev/rdisk9s1";
+
+// ============================================================================
+// Bootloader
+// ----------------------------------------------------------------------------
+
+"Bootloader_title" = "Bootloader";
+"Bootloader_description" = "簡而言之，Clover EFI 幸運草 需要三個必要的檔案。
+boot0 (在硬碟的 MBR) 負責載入 boot1。
+boot1 (在分割區的開機磁區 boot-sector) 搜尋 boot2。
+boot2 (在分割區的根目錄) 載入 /EFI/CLOVER/CLOVERIA32.efi 或 CLOVERX64.efi 及系統核心等等。";
+
+"boot0af_title" = "BIOS 安裝 boot0af (HFS+Fat32)";
+"boot0af_description" = "BIOS 主機板 之 BIOS 啓動 專用。
+使用 fdisk440 將 boot0af 寫入 MBR 的前 440 位元，避免損壞已經存在的 Windows 機碼，boot0af 優先引導 MBR 的 啓動分割區，如果沒有啓動分割區，將引導第一個 EFI/FAT32/HFS 的 boot1 分區(優先引導MBR，其次引導GPT)。
+本安裝將 會 設定 HFS 及 Fat32 安裝分割區為啟動分割區。
+如須安裝在 Fat32 格式，必須在 Win 先將分割區格式化為 Fat32 格式分割區，或在 Mac 操作如下
+1. 先用 磁碟工具 清除 為 MS-DOS (FAT) 格式
+2. diskutil list
+3. diskutil unmount /dev/rdisk9s1
+4. newfs_msdos -v Fat32 -F 32 /dev/rdisk9s1
+5. diskutil mount /dev/rdisk9s1";
+
+"boot0ss_title" = "BIOS 安裝 boot0ss (HFS+Fat32)";
+"boot0ss_description" = "BIOS 主機板 之 BIOS 啓動 專用。
+使用 fdisk440 將 boot0ss 寫入 MBR 的前 440 位元，避免損壞已經存在的 Windows 機碼，boot0ss 優先引導第一個 EFI/FAT32/HFS 的方割區的 boot1 分區(優先引導MBR，其次引導GPT)，如果沒有找到 boot1 分割區，將引導 MBR 的 啓動分割區。
+本安裝將 不會 設定 任何分區為啟動分區。
+如須安裝在 Fat32 格式，必須在 Win 先將分割區格式化為 Fat32 格式分割區，或在 Mac 操作如下
+1. 先用 磁碟工具 清除 為 MS-DOS (FAT) 格式
+2. diskutil list
+3. diskutil unmount /dev/rdisk9s1
+4. newfs_msdos -v Fat32 -F 32 /dev/rdisk9s1
+5. diskutil mount /dev/rdisk9s1";
+
+"bootNo_title" = "不更新 MBR 及 PBR 磁區";
+"bootNo_description" = "不安裝任何引導檔案 (boot0X, boot1X)。
+適用於不需要任何引導檔案的 UEFI 主機板。
+適用於不需要更新 MBR(boot0X) 及 PBR(boot1X) 的4kb格式硬碟。";
+
+"AltBoot_title" = "安裝 PBR 的多重開機選項";
+"AltBoot_description" = "安裝 PBR 的多重開機選項，boot1=變色龍引導，boot6=64位 Clover 引導。
+可設定 開機 boot = boot{按鍵} 進行多重開機設定。";
+
+
+"boot32_title" = "安裝 boot 32位 優先啟動";
+"boot32_description" = "安裝 32位+64位 boot 文件，並優先啟用 32位系統。
+預設啟動 boot = Clover boot 32位，可在 test done 的 2 秒內，
+按 1 選 boot1 = 變色龍 boot，
+按 3 選 boot3 = Clover boot 32位，
+按 6 選 boot6 = Clover boot 64位。";
+
+"boot64_title" = "安裝 boot 64位 優先啟動";
+"boot64_description" = "安裝 32位+64位 boot 文件，並優先啟用 64位系統。
+預設啟動 boot = Clover boot 64位，可在 test done 的 2 秒內，
+按 1 選 boot1 = 變色龍 boot，
+按 3 選 boot3 = Clover boot 32位，
+按 6 選 boot6 = Clover boot 64位。";
+
+// ============================================================================
+// CloverEFI
+// ----------------------------------------------------------------------------
+"CloverEFI_title" = "CloverEFI";
+"CloverEFI_description" = "選擇要安裝的 CloverEFI 版本。";
+"cloverEFI.32_title" = "CloverEFI 32位版本";
+"cloverEFI.32_description" = "CloverEFI 32位版本";
+"cloverEFI.64.sata_title" = "CloverEFI 64位 SATA";
+"cloverEFI.64.sata_description" = "CloverEFI 64位版本，使用 SATA 模式存取硬碟。";
+"cloverEFI.64.blockio_title" = "CloverEFI 64位 BiosBlockIO";
+"cloverEFI.64.blockio_description" = "CloverEFI 64位版本，使用 Bios Block I/O 模式存取硬碟。";
+"cloverEFI.64.blockio2_title" = "CloverEFI 64-bits BiosBlockIO for NVIDIA NForce MCP79";
+"cloverEFI.64.blockio2_description" = "CloverEFI 64-bits using Bios Block I/O to access drives for chipset NVIDIA NForce MCP79";
+
+// ============================================================================
+// Drivers
+// ----------------------------------------------------------------------------
+"Ps2KeyboardDxe-32_description" = "32位，PS/2 鍵盤 驅動。";
+"Ps2MouseAbsolutePointerDxe-32_description" = "32位，PS/2 觸控板 驅動。";
+"Ps2MouseDxe-32_description" = "32位，PS/2 滑鼠 驅動。";
+"Ps2MouseDxe-64_description" = "64位，PS/2 滑鼠 驅動。";
+"UsbMouseDxe-32_description" = "32位，USB 滑鼠 驅動。";
+"UsbMouseDxe-64_description" = "64位，USB 滑鼠 驅動。";
+"VBoxExt2-32_description" = "32位，來自 Virtualbox 的 ext2/3 檔案系統驅動。";
+"VBoxExt2-64_description" = "64位，來自 Virtualbox 的 ext2/3 檔案系統驅動。";
+"VBoxExt4-32_description" = "32位，來自 Virtualbox 的 ext4 檔案系統驅動。";
+"VBoxExt4-64_description" = "64位，來自 Virtualbox 的 ext4 檔案系統驅動。";
+"XhciDxe-32_description" = "32位，XHCI USB 3.0 驅動。";
+"XhciDxe-64_description" = "64位，XHCI USB 3.0 驅動。";
+"CsmVideoDxe-64_description" = "64位，Clover GUI 圖形使用者介面的顯示驅動，允許選擇更多解析度。
+基於 UEFI BIOS 的 CSM module 模組，CSM 必須 Enabled 啓動。
+Clover 可能無法啓動，可能會發生 系統喚醒 的問題。使用時，請注意相關問題。";
+"DataHubDxe-64_description" = "64位，此 DataHub 協定支持 Mac OS X 強制啓用。
+通常已啓用，但有時可能遺漏，可在螢幕 warning 中查看。";
+"EmuVariableUefi-64_description" = "64位，支持 Mac OS X 需要的 NVRAM 變數。
+大多數的 UEFI boot 使用硬體 NVRAM，但是部份少見案例需要 EmuVariableUefi。
+建議只在 有問題時，才啓用 EmuVariableUefi。";
+"OsxAptioFixDrv-64_description" = "64位，提供 UEFI 韌體的 記憶體問題修正，如 AMI Aptio 等。";
+"OsxLowMemFixDrv-64_description" = "64位，提供 UEFI 韌體的 記憶體問題修正，如 AMI Aptio 等。
+為 OsxAptioFixDrv 的簡化版本，請勿與 OsxAptioFixDrv 同時使用。";
+"PartitionDxe-64_description" = "64位，支持非常態的分割區配置，如 hybrid GPT/MBR 或 Apple Partition Map。";
+"SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
+"AppleEvent-64_description" = "Create AppleEvent protocol for FileVault2";
+"AppleKeyAggregator-64_description" = "Support for boot UI dialog for FileVault2";
+"FirmwareVolume-64_description" = "Create FirmwareVolume with cursor images";
+"AppleImageCodec-64_description" = "For decode PNG and BMP images in boot UI";
+"AppleUITheme-64_description" = "Create boot UI Themes support";
+"HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
+"UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
+"AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
+"OSInfo-64_description" = "Inform user about version of macOS (optional)";
+
+
+// ============================================================================
+// Themes
+// ----------------------------------------------------------------------------
+
+"Themes_title" = "開機主題";
+"Themes_description" = "選擇安裝，開機時，顯示的背景主題。";
+
+"BGM_title" = "BlackGreenMoody";
+"BGM_description" = "選擇安裝來自 Blackosx 的 BlackGreenMoody 主題。
+安裝位置 /EFI/CLOVER/themes/BGM。";
+
+"embedded_title" = "embedded";
+"embedded_description" = "embedded theme from Blackosx,
+Install to /EFI/CLOVER/themes/embedded";
+
+"metal_title" = "Metal";
+"metal_description" = "選擇安裝來自 Slice 的原始 Metal 主題。
+安裝位置 /EFI/CLOVER/themes/metal。";
+
+"random_title" = "random";
+"random_description" = "random theme from Slice,
+Install to /EFI/CLOVER/themes/random choose a theme from others";
+
+"steampunkblack_title" = "steampunkblack";
+"steampunkblack_description" = "steampunkblack theme from medik,
+Install to /EFI/CLOVER/themes/steampunkblack";
+
+"CloverThemeManager_title" = "CloverThemeManager.app";
+"CloverThemeManager_description" = "CloverThemeManager.app by blackosx,
+keeps your Themes up to date, remove or install them by choosing from a wide selection.
+Install to /Applications";
+// ============================================================================
+// RC Scripts
+// ----------------------------------------------------------------------------
+"rc.scripts.on.target_title" = "安裝 RC scripts 到目標磁區";
+"rc.scripts.on.target_description" = "安裝全部 RC scripts 到目標磁區。
+目標磁區必須是 可開機的 OSX 磁區。";
+"rc.scripts.on.all.volumes_title" = "安裝全部 RC scripts 到全部可開機的 OSX 磁區";
+"rc.scripts.on.all.volumes_description" = "安裝全部 RC scripts 到全部內置可開機的 OSX 磁區。";
+"Optional RC Scripts" = "選擇安裝 RC Scripts";
+"disable_sleep_proxy_client_description" = "停用 mDNSResponder 休眠 proxy client 服務，可以避免系統休眠時，每小時自動喚醒。";
+
+// ============================================================================
+// Clover Preference Pane
+// ----------------------------------------------------------------------------
+"CloverPrefpane_title" = "安裝 Clover 系統偏好設定 面板";
+"CloverPrefpane_description" = "安裝 Clover 系統偏好設定 面板 到選擇磁區。
+包含 可提醒 Clover 更新訊息的 Clover 更新軟體。";
+
+// ----------------------------------------------------------------------------
+
