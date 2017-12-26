@@ -499,6 +499,24 @@
 /* Title of the Preferences window */
 "Preferences" = "Preferenze";
 
+/* checkbox under the Preferences. If enabled the app will try reopen last opened document
+ of the previous session
+ */
+"Reopen last documents from previous execution" = "Riapri gli ultimi documenti che erano aperti nella sessione precedente";
+
+/* Popup button under the Preferences.
+ determine the behaviour of the documents-windows.
+ preferred will surely show windows regrouped into one that using tabs, and
+ this way each window will have the same position after a restoration.
+ 
+ tabbing mode is only available in 10.12+
+ */
+"Window tabbing mode:" = "Tabbing mode delle finestre:";
+"automatic" = "automatico";
+"preferred" = "preferito";
+"disallowed" = "non permesso";
+"none, cascade windows" = "nessuno, finestre a cascata";
+
 /* checkbox under the Preferences. If enabled the app will try to locate the config.plist loaded by Clover at boot
  (even if inside an unmounted partition) */
 "Try to load the confi.plist used by Clover to boot" = "Prova a caricare il config usato per bootare";
