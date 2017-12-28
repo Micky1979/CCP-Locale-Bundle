@@ -553,6 +553,14 @@
  */
 "Allow on screen notifications (upper right corner) if a need be" = "Permetti notifiche sullo schermo (angolo superiore destro) se c'è bisogno";
 
+/* checkbox under the Preferences.
+ If enabled, when you quit the app, will ask you if you want un mount partitions such ESP or Recovery volumes.
+ */
+"Ask to un mount any ESP/Recovery volume when you quit the app" = "Chiedi di smontare volumi come ESP/Recovery quando chiudi la app";
+
+/* .. and this will be the question: */
+"You may be interested to un mount the following disks:" = "Potresti essere interessato nello smontare queste partizioni:";
+
 /* static labels under the Preferences. */
 "Editor rules" = "Settaggi per l'Editor";
 "Clover rules" = "Settaggi per Clover";

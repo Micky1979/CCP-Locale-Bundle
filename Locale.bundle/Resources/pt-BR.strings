@@ -561,6 +561,14 @@
  */
 "Allow on screen notifications (upper right corner) if a need be" = "Allow on screen notifications (upper right corner) if a need be";
 
+/* checkbox under the Preferences.
+ If enabled, when you quit the app, will ask you if you want un mount partitions such ESP or Recovery volumes.
+ */
+"Ask to un mount any ESP/Recovery volume when you quit the app" = "Ask to un mount any ESP/Recovery volume when you quit the app";
+
+/* .. and this will be the question: */
+"You may be interested to un mount the following disks:" = "You may be interested to un mount the following disks:";
+
 /* static labels under the Preferences. */
 "Editor rules" = "Editor rules";
 "Clover rules" = "Clover rules";
