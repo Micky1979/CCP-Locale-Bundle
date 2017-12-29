@@ -136,6 +136,8 @@
 "download and build Clover using Build_Clover.command" = "scarica e compila Clover usando Build_Clover.command";
 "open Build_Clover.command" = "esegui Build_Clover.command";
 "edit BuildCloverConfig.txt" = "modifica BuildCloverConfig.txt";
+"is not writable" = "non è scrivibile";
+"cannot be updated" = "non può essere aggiornato";
 /* ----------------- */
 
 

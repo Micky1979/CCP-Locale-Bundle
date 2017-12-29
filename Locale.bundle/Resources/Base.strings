@@ -136,6 +136,8 @@
 "download and build Clover using Build_Clover.command" = "download and build Clover using Build_Clover.command";
 "open Build_Clover.command" = "open Build_Clover.command";
 "edit BuildCloverConfig.txt" = "edit BuildCloverConfig.txt";
+"is not writable" = "is not writable";
+"cannot be updated" = "cannot be updated";
 /* ----------------- */
 /* Untitled, no title for a new document */
 "Untiteled" = "Untiteled";
