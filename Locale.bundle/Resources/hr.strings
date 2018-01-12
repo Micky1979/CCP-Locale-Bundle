@@ -18,7 +18,7 @@
 "Show All" = "Show All";
 "Quit Clover Configurator Pro" = "Quit Clover Configurator Pro";
 /* ----------------- */
-"Clover Configurator Pro always keeps Build_Clover.command up to date and is located at \"%@/CCP/\" by this application.\nIf you're used to place Clover's source code in a different location than ~/src (the default location), click on \"Close\" otherwise that will be used.\n\nIf this is the first time you use Build_Clover.command remember that Xcode has to be installed!" = "Clover Configurator Pro always keeps Build_Clover.command up to date and is located at \"%@/CCP/\" by this application.\nIf you're used to place Clover's source code in a different location than ~/src (the default location), click on \"Close\" otherwise that will be used.\n\nIf this is the first time you use Build_Clover.command remember that Xcode has to be installed!";
+"Clover Configurator Pro always keeps Build_Clover.command up to date.\nThis script will download EDKII+Clover's source code in ~/src using MODE=S (see BuildCloverConfig.txt).\nYou can specify a different location where to download and keep it update in the Preference panel and you can also disable this menu entirely.\n\nIf this is the first time you use Build_Clover.command remember that Xcode has to be installed!" = "Clover Configurator Pro always keeps Build_Clover.command up to date.\nThis script will download EDKII+Clover's source code in ~/src using MODE=S (see BuildCloverConfig.txt).\nYou can specify a different location where to download and keep it update in the Preference panel and you can also disable this menu entirely.\n\nIf this is the first time you use Build_Clover.command remember that Xcode has to be installed!";
 /* ----------------- */
 "File" = "File";
 "New" = "New";
@@ -316,6 +316,12 @@
 
 // Config plist editor specific ------------------------------------------------------------------------------------------------------------------------
 
+/* you are attempting to set a new SystemParameters->CustomUUID, randomly generated (can be reused elsewhere) */
+"generate new" = "generate new";
+
+/* you are attempting to keep the System uuid and set it as SystemParameters->CustomUUID (can be reused elsewhere) */
+"get it from macOS" = "get it from macOS";
+
 /* you are attempting to set a new config key with an empty Data tag */
 "+ empty Data tag to be filled" = "+ empty Data tag to be filled";
 
@@ -347,6 +353,12 @@
 
 /* you are attempting to set a new dictionary under KernelAndKextsPatches->KextsToPatch to be filled with your values (Name, Comment, Find, Replace) */
 "+ KextsToPatch dictionary to be filled (Name, Comment, Find, Replace)" = "+ KextsToPatch dictionary to be filled (Name, Comment, Find, Replace)";
+
+/* you are attempting to set a new dictionary under KernelAndKextsPatches->KernelToPatch to be filled with your values (Comment, Find, Replace) */
+"+ KernelToPatch dictionary to be filled (Comment, Find, Replace)" = "+ KernelToPatch dictionary to be filled (Comment, Find, Replace)";
+
+/* you are attempting to set a new dictionary under KernelAndKextsPatches->BootPatches to be filled with your values (Comment, Find, Replace) */
+"+ BootPatches dictionary to be filled (Comment, Find, Replace)" = "+ BootPatches dictionary to be filled (Comment, Find, Replace)";
 
 /* you are attempting to set a new dictionary under GUI->Custom->Legacy */
 "+ GUI->Custom->Legacy->Dictionary to be filled" = "+ GUI->Custom->Legacy->Dictionary to be filled";
