@@ -705,6 +705,7 @@ Questo protocollo è già presente nella maggior parte dei casi, ma può mancare
 La maggior parte dei firmware UEFI utilizzano hardware NVRAM, ma in rari casi è necessario il driver.
 Usare solo se si ha un problema senza di questo driver.";
 "OsxAptioFixDrv-64_description" = "Driver a 64 bit che risolve i problemi di memoria sul firmware UEFI come AMI Aptio bios.";
+"AptioMemoryFix_description" = "Driver a 64 bit che risolve i problemi di memoria sul firmware UEFI come AMI Aptio bios.";
 "OsxLowMemFixDrv-64_description" = "Driver a 64 bit che permette, durante l'avvio UEFI, di riallocare gli indirizzi per boot.efi e quindi di avviare correttamente OS X Mountain Lion (10.8). E' una variante semplificata di OsxAptioFixDrv (non utilizzare entrambi insieme).";
 "PartitionDxe-64_description" = "Driver a 64 bit che aggiunge supporto a tabelle di partizione non comuni come: GPT/MBR ibrido o Mappa Partizione Apple.";
 "SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
@@ -716,7 +717,6 @@ Usare solo se si ha un problema senza di questo driver.";
 "HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
 "UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
 "AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-"OSInfo-64_description" = "Inform user about version of macOS (optional)";
 
 
 // ============================================================================

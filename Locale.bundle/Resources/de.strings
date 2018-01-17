@@ -704,6 +704,7 @@ eine Fehlermeldung sehen.";
 Meistens wird beim UEFI booten der Hardware NVRAM genutzt, aber in einigen wenigen Fällen wird dieser Treiber benötigt.
 Diesen Treiber nur benutzen, wenn es ohne ihn Probleme gibt.";
 "OsxAptioFixDrv-64_description" = "64Bit-Treiber um Memory Probleme in der UEFI-Firmware von AMI Aptio zu beheben.";
+"AptioMemoryFix_description" = "64Bit-Treiber um Memory Probleme in der UEFI-Firmware von AMI Aptio zu beheben.";
 "OsxLowMemFixDrv-64_description" = "Einfachere Variante des OsxAptioFixDrv, 64bit (auf keinen Fall beide benutzen)";
 "PartitionDxe-64_description" = "64Bit-Treiber um unübliche Partitionstabellen, wie z.B. GPT/MBR oder Apple Partirions Tabelle, zu unterstützen.";
 "SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
@@ -715,7 +716,6 @@ Diesen Treiber nur benutzen, wenn es ohne ihn Probleme gibt.";
 "HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
 "UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
 "AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-"OSInfo-64_description" = "Inform user about version of macOS (optional)";
 
 
 // ============================================================================
@@ -768,5 +768,3 @@ Die Zielpartition muss ein bootfähiges OSX System enthalten.";
 Den CloverUpdater hinzufügen, er kann dich auf Updates hinweisen.";
 
 // ----------------------------------------------------------------------------
-
-

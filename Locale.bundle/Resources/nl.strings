@@ -702,6 +702,7 @@ Meestal is dit al aanwezig maar soms kan het ook missen. In dat geval zal je een
 Meestal gebruikt UEFI hardware NVRAM maar in sommige zeldzame gevallen is dit stuurprogramma nodig.
 Gebruik dit alleen als je problemen hebt zonder het";
 "OsxAptioFixDrv-64_description" = "64bit stuurprogramma voor het corrigeren van Geheugen problemen op UEFI firmware zoals een AMI Aptio";
+"AptioMemoryFix_description" = "64bit stuurprogramma voor het corrigeren van Geheugen problemen op UEFI firmware zoals een AMI Aptio";
 "OsxLowMemFixDrv-64_description" = "Vereenvoudigde variant van OsxAptioFixDrv, 64bit (gebruik ze niet naast elkaar)";
 "PartitionDxe-64_description" = "64bit stuurprogramma ter ondersteuning niet-gebruikelijke partition maps zoals: hybride GPT/MBR of Apple Partition Map.";
 "SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
@@ -713,7 +714,6 @@ Gebruik dit alleen als je problemen hebt zonder het";
 "HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
 "UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
 "AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-"OSInfo-64_description" = "Inform user about version of macOS (optional)";
 
 
 // ============================================================================

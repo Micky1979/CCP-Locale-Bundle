@@ -620,7 +620,7 @@
 // Target
 // ----------------------------------------------------------------------------
 "Target.ESP_title" = "Instalar Clover na ESP";
-"Target.ESP_description" = "Instala o Clover na Partição ESP (Partição EFI do Sistema) do Volume alvo
+"Target.ESP_description" = "Instala o Clover na Partição ESP (Partição EFI do Sistema) do Volume selecionado
 
 É necessário formatar a ESP como Fat32 (recomendado) ou HFS pelo OS X primeiro.
 
@@ -638,18 +638,14 @@ boot0 (No MBR do disco) responsável por carregar o boot1.
 boot1 (No setor de boot da partição) para encontrar o boot2.
 boot2 (Na raiz da partição) para carregar /EFI/CLOVER/CLOVERIA32.efi ou CLOVERX64.efi, e kernel etc.";
 
-"boot0af_title" = "Instalar boot0af no MBR";
-"boot0af_description" = "Usado para iniciar em placas-mãe BIOS.
-boot0af (Primeiro boot0 Ativo) o bootloader tenta iniciar a partição ativa definida no MBR. Se não houver partições ativas nele, ele irá tentar iniciar a primeira partição EFI/FAT32/HFS (definida no MBR ou no GPT) com uma assinatura PBR válida
-Esta opção irá marcar a partição HFS/Fat32 selecionada como ativa.";
+"boot0af_title" = "Instalar bootaf no MBR";
+"boot0af_description" = "Usado para o arranque em placas-mãe BIOS. \ Nboot0af (boot0 ativo primeiro) bootloader tenta arrancar a partição ativa definida no MBR. Se não houver nenhuma partição ativa, ele vai tentar arrancar a primeira partição EFI/FAT32/HFS (definida no MBR e, em seguida, o GPT) com uma assinatura PBR válida. \ NEsta escolha irá configurar partição HFS/Fat32 selecionada para ser ativa. ";
 
-"boot0ss_title" = "Instala o boot0ss no MBR";
-"boot0ss_description" = "Usado para iniciar em placas-mãe BIOS.
-boot0ss (boot0 Signature Scanning) o bootloader tentará iniciar a primeira partição EFI/FAT32/HFS (definida no MBR ou no GPT) com uma assinatura PBR válida. Se nenhuma partição for encontrada ele irá tentar iniciar a partição ativa definida no MBR.
-Este bootloader é uma boa escolha quando você tem o Windows no mesmo disco porque o Windows quer ter sua partição ativa.\Esta escolha não irá ativar nenhuma partição no MBR.";
+"boot0ss_title" = "Instalar boot0ss no MBR";
+"boot0ss_description" = "Usado para o arranque  em placas-mãe BIOS. \ Nboot0ss (boot0 assinatura Scanning) bootloader tenta arrancar a primeira partição EFI/FAT32/HFS (definida no MBR e, em seguida, o GPT) com uma assinatura PBR válida. Se nenhuma partição for encontrada, ele tentará inicializar a partição ativa definida no MBR. \ NEsse bootloader é uma boa opção quando você tiver o Windows instalado no mesmo disco, pois o Windows quer ter sua partição ativa. \ NEsta opção não irá ativar qualquer partição no MBR. ";
 
 "bootNo_title" = "Não atualiza os setores de MBR e PBR";
-"bootNo_description" = "Não instalal nenhum arquivo de boot (boot0X, boot1X).
+"bootNo_description" = "Não instala nenhum arquivo de boot (boot0X, boot1X).
 Utilizado por Placas-Mãe UEFI que não necessitam dos arquivos de boot.
 Também pode ser utilizado se você não quiser atualizar os setores de boot (MBR e PBR).";
 
@@ -703,14 +699,15 @@ Apertar a tecla 6 para boot6 = Iniciar o Clover EFI em 64bit.";
 "XhciDxe-64_description" = "Driver para USB 3.0, 64bit";
 "CsmVideoDxe-64_description" = "Driver de Vídeo 64bit para o GUI do Clover possibilitando a escolha de mais resoluções.
 Ele é baseado no módulo CSM existente em BIOS UEFI e é necessário que o modo esteja ativo.
-O Clover pode não iniciar enquanto usando este driver e ele também pode provocar problemas com o Sleep.
+O Clover pode não iniciar enquanto usar este driver e ele também pode provocar problemas com o Sleep.
 Use com precaução.";
 "DataHubDxe-64_description" = "Este é o suporte ao protocolo DataHub que é obrigatório no OS X.
 Normalmente ele já está presente mas algumas vezes pode não estar. Neste caso você deverá ver um aviso na tela.";
-"EmuVariableUefi-64_description" = "Driver 64bit para o suporte a variáveis NVRAM necessário para o Mac OS X.
+"EmuVariableUefi-64_description" = "Driver 64bit para o suporte a variáveis NVRAM necessárias para o Mac OS X.
 Normalmente o boot UEFI usa o Hardware NVRAM mas em alguns casos raros este driver é necessário.
-Use-o somente se você tiver problemas quando não o estiver utilizando";
+Use somente se você tiver problemas quando não o estiver utilizando";
 "OsxAptioFixDrv-64_description" = "Driver de 64bit para corrigir problemas de Memória em Firmware UEFI como em AMI Aptio BIOS";
+"AptioMemoryFix_description" = "Driver de 64bit para corrigir problemas de Memória em Firmware UEFI como em AMI Aptio BIOS";
 "OsxLowMemFixDrv-64_description" = "Versão simplificada do OsxAptioFixDrv, 64bit (não use os dois juntos)";
 "PartitionDxe-64_description" = "Driver de 64bit para suportar Esquemas de Partição não comuns como Híbrido GPT/MBR ou Apple Partition Map.";
 "SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
@@ -722,7 +719,6 @@ Use-o somente se você tiver problemas quando não o estiver utilizando";
 "HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
 "UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
 "AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-"OSInfo-64_description" = "Inform user about version of macOS (optional)";
 
 
 // ============================================================================
@@ -733,16 +729,16 @@ Use-o somente se você tiver problemas quando não o estiver utilizando";
 "Themes_description" = "Selecione Temas para instalação.";
 
 "BGM_title" = "Black_Green_Moody";
-"BGM_description" = "BGM (Black Green Moody) by Blackosx,
-Será instalado em /EFI/CLOVER/themes/BGM";
+"BGM_description" = "Tema padrão black_green por Blackosx _Moody,
+A instalar em /EFI/CLOVER/themes/BGM";
 
 "embedded_title" = "embedded";
 "embedded_description" = "embedded theme from Blackosx,
 Install to /EFI/CLOVER/themes/embedded";
 
 "metal_title" = "metal";
-"metal_description" = "O tema metal original by Slice,
-Será instalado em /EFI/CLOVER/themes/metal";
+"metal_description" = "Tema metal original por Slice,
+A instalar em /EFI/CLOVER/themes/metal";
 
 "random_title" = "random";
 "random_description" = "random theme from Slice,
@@ -759,19 +755,19 @@ Install to /Applications";
 // ============================================================================
 // RC Scripts
 // ----------------------------------------------------------------------------
-"rc.scripts.on.target_title" = "Instalar RC scripts no Volume alvo";
-"rc.scripts.on.target_description" = "Instala todos os RC scripts no Volume alvo.
-O volume alvo necessita ser um Volume do sistema OS X inicializável.";
+"rc.scripts.on.target_title" = "Instalar RC scripts no Volume selecionado";
+"rc.scripts.on.target_description" = "Instala todos os RC scripts no Volume selecionado.
+O volume selecionado necessita ser um Volume do sistema OS X inicializável.";
 "rc.scripts.on.all.volumes_title" = "Instala todos os RC scripts em todos os Volumes Inicializáveis do OSX";
-"rc.scripts.on.all.volumes_description" = "Instala todos os RC scripts em todos os Volumes Internos Inicializáveis do OSX diferentes do Volume Alvo.";
-"Optional RC Scripts" = "Opcional RC Scripts";
-"disable_sleep_proxy_client_description" = "Desabilita o serviço mDNSResponder sleep proxy client. Isso irá impedir que o systema retorne do Sleep a cada hora";
+"rc.scripts.on.all.volumes_description" = "Instala todos os RC scripts em todos os Volumes Internos Inicializáveis do OSX diferentes do Volume selecionado.";
+"Optional RC Scripts" = "RC Scripts Opcionais";
+"disable_sleep_proxy_client_description" = "Desabilita o serviço mDNSResponder sleep proxy cliente. Isso irá impedir que o sistema retorne do Sleep a cada hora";
 
 // ============================================================================
 // Clover Preference Pane
 // ----------------------------------------------------------------------------
-"CloverPrefpane_title" = "Instalar o Painel de Preferências do Clover";
-"CloverPrefpane_description" = "Instala o Painel de Preferências do Clover no volume alvo.
-Inclui o CloverUpdater que notificará você sobre atualizações do Clover.";
+"CloverPrefpane_title" = "Instalar Clover Painel Preferências";
+"CloverPrefpane_description" = "Instala o CloverUpdater no volume selecionado.
+O CloverUpdater notificará você sobre atualizações do Clover.";
 
 // ----------------------------------------------------------------------------

@@ -705,6 +705,7 @@ Obecność tego sterownika jest zawsze bezpieczna.";
 "EmuVariableUefi-64_description" = "Sterownik (64-ro bitowy) wymagany dla płyt głównych z BIOSem Phoenix w celu załadowania informacji z NVRAMu.
 Należy użyć tylko w przypadku kiedy nie są ładowane parametry z NVRAM !";
 "OsxAptioFixDrv-64_description" = "Sterownik (64-ro bitowy) naprawiający problem z pamięcią w trybie UEFI na BIOSach AMI Aptio.";
+"AptioMemoryFix_description" = "Sterownik (64-ro bitowy) naprawiający problem z pamięcią w trybie UEFI na BIOSach AMI Aptio.";
 "OsxLowMemFixDrv-64_description" = "Prostsza wersja sterownika OsxAptioFixDrv, 64 bity (NIE UŻYWAĆ OBU RÓWNOCZEŚNIE).";
 "PartitionDxe-64_description" = "Sterownik (64-ro bitowy) odpowiedzialny za mapę partycji typu: hybryda GPT/MBR lub Schemat Partycji Apple.
 Obecność tego sterownika jest zawsze bezpieczna.";
@@ -717,7 +718,6 @@ Obecność tego sterownika jest zawsze bezpieczna.";
 "HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
 "UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
 "AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-"OSInfo-64_description" = "Inform user about version of macOS (optional)";
 
 
 // ============================================================================

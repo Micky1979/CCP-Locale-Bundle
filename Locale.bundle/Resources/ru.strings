@@ -361,7 +361,7 @@
 "+ BootPatches dictionary to be filled (Comment, Find, Replace)" = "+ BootPatches словарь для редактирования (Comment, Find, Replace)";
 
 /* you are attempting to set a new dictionary under GUI->Custom->Legacy */
-"+ GUI->Custom->Legacy->Dictionary to be filled" = "+ GUI->Custom->Legacy->Dictionary to be filled";
+"+ GUI->Custom->Legacy->Dictionary to be filled" = "+ GUI->Custom->Legacy->Словарь подлежит редактированию";
 
 /* you are attempting to set a new dictionary under GUI->Custom->Tool */
 "+ GUI->Custom->Tool->Dictionary to be filled" = "+ GUI->Custom->Tool->Словарь подлежит редактированию";
@@ -531,7 +531,7 @@
 
 /* checkbox under the Preferences. If enabled the app will try to locate the config.plist loaded by Clover at boot
  (even if inside an unmounted partition) */
-"Try to load the confi.plist used by Clover to boot" = "Попробуйте открыть confi.plist, который использует Clover во время загрузки";
+"Try to load the config.plist used by Clover to boot" = "Попробуйте открыть config.plist, который использует Clover во время загрузки";
 
 /* checkbox under the Preferences. If enabled the app will search for your ~/src containings Clover. You canspecify a different path */
 "Use your Clover source installing Clover (~/src by default)" = "Используйте источник Clover для установки Clover (~/src по умолчанию)";
@@ -701,6 +701,7 @@ boot0ss (boot0 Signature Scanning) ищет первый раздел типа E
 Чаще всего UEFI BIOS использует встроенный NVRAM, но иногда нет
 Используйте драйвер только если вы точно знаете, что он нужен.";
 "OsxAptioFixDrv-64_description" = "Исправляет ошибки памяти, создаваемые AMI Aptio UEFi, и некоторыми другими BIOS.";
+"AptioMemoryFix_description" = "Исправляет ошибки памяти, создаваемые AMI Aptio UEFi, и некоторыми другими BIOS.";
 "OsxLowMemFixDrv-64_description" = "Упрощенный вариант драйвера OsxAptioFixDrv. Не использовать совместно.";
 "PartitionDxe-64_description" = "Драйвер для поддержки необычных схем разделов как гибрид GPT/MBR и Apple Partition Map.";
 "SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
@@ -712,7 +713,6 @@ boot0ss (boot0 Signature Scanning) ищет первый раздел типа E
 "HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
 "UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
 "AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-"OSInfo-64_description" = "Inform user about version of macOS (optional)";
 
 
 // ============================================================================

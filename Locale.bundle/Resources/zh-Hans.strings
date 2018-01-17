@@ -712,6 +712,7 @@ Clover 可能无法启动，可能会发生 系统唤醒 的问题。使用时�
 大多数的 UEFI boot 使用硬件NVRAM，但是部份少见案例需要 EmuVariableUefi。
 建议只在 有问题时，才启用 EmuVariableUefi。";
 "OsxAptioFixDrv-64_description" = "64位，提供 UEFI 固件的 内存问题修正，如 AMI Aptio 等。";
+"AptioMemoryFix_description" = "64位，提供 UEFI 固件的 内存问题修正，如 AMI Aptio 等。";
 "OsxLowMemFixDrv-64_description" = "64位，提供 UEFI 固件的 内存问题修正，如 AMI Aptio 等。
 为 OsxAptioFixDrv 的简化版本，请勿与 OsxAptioFixDrv 同时使用。";
 "PartitionDxe-64_description" = "64位，支持非常态的分区配置，如 hybrid GPT/MBR 或 Apple Partition Map。";
@@ -724,7 +725,6 @@ Clover 可能无法启动，可能会发生 系统唤醒 的问题。使用时�
 "HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
 "UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
 "AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-"OSInfo-64_description" = "Inform user about version of macOS (optional)";
 
 
 // ============================================================================
@@ -777,4 +777,3 @@ Install to /Applications";
 包含可提醒 Clover 更新信息的 Clover 更新软体。";
 
 // ----------------------------------------------------------------------------
-

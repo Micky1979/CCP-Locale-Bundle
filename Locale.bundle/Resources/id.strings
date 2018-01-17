@@ -702,6 +702,7 @@ Biasanya sudah tersedia tapi kadang-kadang terlewat. Kalau terlewat akan terliha
 Biasanya UEFI boot memakai hardware NVRAM tapi kadang-kadang driver ini masih dibutuhkan.
 Gunakan HANYA kalau ada masalah";
 "OsxAptioFixDrv-64_description" = "Driver 64bit yang membenahi masalah Memori pada UEFI seperti pada AMI Aptio";
+"AptioMemoryFix_description" = "Driver 64bit yang membenahi masalah Memori pada UEFI seperti pada AMI Aptio";
 "OsxLowMemFixDrv-64_description" = "Varian sederhana OsxAptioFixDrv, 64bit (Jangan pakai bersamaan)";
 "PartitionDxe-64_description" = "Driver 64bit yang mendukung partisi yang tidak umum seperti: hybrid GPT/MBR atau Apple Partition Map.";
 "SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
@@ -713,7 +714,6 @@ Gunakan HANYA kalau ada masalah";
 "HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
 "UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
 "AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-"OSInfo-64_description" = "Inform user about version of macOS (optional)";
 
 
 // ============================================================================

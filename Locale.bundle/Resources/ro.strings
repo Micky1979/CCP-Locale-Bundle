@@ -701,6 +701,7 @@ De obicei este deja prezent, dar uneori poate lipsi. In acest caz, veti vedea un
 De obicei, initierea UEFI foloseste NVRAM de tip hardware, dar in unele cazuri rare, acest driver e necesar.
 Folositi-l doar daca intampinati probleme fara el.";
 "OsxAptioFixDrv-64_description" = "Driver 64-bit pentru rezolvarea problemelor de memorie pe firmware UEFI cum ar fi AMI Aptio.";
+"AptioMemoryFix_description" = "Driver 64-bit pentru rezolvarea problemelor de memorie pe firmware UEFI cum ar fi AMI Aptio.";
 "OsxLowMemFixDrv-64_description" = "O varianta simplificata de OsxAptioFixDrv, 64-bit (a nu se folosi ambele simultan)";
 "PartitionDxe-64_description" = "Driver 64-bit pentru suportul tipurilor de partitii mai putin uzuale, cum ar fi: GPT/MBR hibrid, sau Apple Partition Map.";
 "SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
@@ -712,7 +713,6 @@ Folositi-l doar daca intampinati probleme fara el.";
 "HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
 "UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
 "AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-"OSInfo-64_description" = "Inform user about version of macOS (optional)";
 
 
 // ============================================================================

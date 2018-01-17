@@ -704,6 +704,7 @@ boot0ss (boot0ss - Сканує Сигнатуру) шукає перший ро
 Найчастіше UEFI використовує вбудований NVRAM, але іноді ні
 Використовуйте драйвер тільки якщо ви достеменно знаєте, що він потрібен.";
 "OsxAptioFixDrv-64_description" = "64-бітний драйвер виправляє помилки пам'яті, які створює AMI Aptio UEFI";
+"AptioMemoryFix_description" = "64-бітний драйвер виправляє помилки пам'яті, які створює AMI Aptio UEFI";
 "OsxLowMemFixDrv-64_description" = "Спрощений варіант 64-бітного драйверу. Увага! Не використовувати спільно з OsxAptioFixDrv!";
 "PartitionDxe-64_description" = "64-бітний драйвер для підтримки незвичайних схем розділів як гібрид GPT/MBR або Apple Partition Map.";
 "SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
@@ -715,7 +716,6 @@ boot0ss (boot0ss - Сканує Сигнатуру) шукає перший ро
 "HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
 "UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
 "AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-"OSInfo-64_description" = "Inform user about version of macOS (optional)";
 
 
 // ============================================================================

@@ -702,6 +702,7 @@ CloverのOS起動機能との関連はなく、またスリープ復帰時の動
 UEFI起動では、通常はハードウェアNVRAMを使用しますが、まれにこのドライバが必要になることがあります。
 システムの動作に問題がある場合にのみ使用してください";
 "OsxAptioFixDrv-64_description" = "AMI AptioなどのUEFIファームウェアでメモリーの問題を修正する64bitドライバ";
+"AptioMemoryFix_description" = "AMI AptioなどのUEFIファームウェアでメモリーの問題を修正する64bitドライバ";
 "OsxLowMemFixDrv-64_description" = "OsxAptioFixDrvの簡易版 -64bit (OsxAptioFixDrvと併用不可)";
 "PartitionDxe-64_description" = "ハイブリッドGPT/MBRやアップルパーティションマップなど、特殊なパーティションマップをサポートする64bitドライバ。";
 "SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
@@ -713,7 +714,6 @@ UEFI起動では、通常はハードウェアNVRAMを使用しますが、ま�
 "HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
 "UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
 "AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-"OSInfo-64_description" = "Inform user about version of macOS (optional)";
 
 
 // ============================================================================
@@ -766,4 +766,3 @@ Install to /Applications";
 環境設定内のCloverUpdaterは、Cloverのアップデートをお知らせします。";
 
 // ----------------------------------------------------------------------------
-

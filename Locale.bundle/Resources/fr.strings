@@ -703,6 +703,7 @@ Ce protocole est déjà présent dans la majorité des cas, mais il se peut qu'i
 La plupart des firmwares UEFI utilisent une NVRAM matérielle, mais dans de rares cas ce driver est nécessaire.
 À n'utiliser que si vous avez des problèmes de NVRAM.";
 "OsxAptioFixDrv-64_description" = "Driver 64 bits pour corriger les problèmes de mémoire sur les firmwares UEFI tel que les AMI Aptio";
+"AptioMemoryFix_description" = "Driver 64 bits pour corriger les problèmes de mémoire sur les firmwares UEFI tel que les AMI Aptio";
 "OsxLowMemFixDrv-64_description" = "Variante simplifiée du driver 64 bits OsxAptioFixDrv (les 2 drivers ne doivent pas être installés simultanément)";
 "PartitionDxe-64_description" = "Driver 64 bits permettant le support de tables de partition non communes telle que: hybrid GPT/MBR ou Apple Partition.";
 "SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
@@ -714,7 +715,6 @@ La plupart des firmwares UEFI utilisent une NVRAM matérielle, mais dans de rare
 "HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
 "UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
 "AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-"OSInfo-64_description" = "Inform user about version of macOS (optional)";
 
 
 // ============================================================================
@@ -767,5 +767,3 @@ Le volume de destination doit être un volume OSX bootable.";
 Inclus aussi CloverUpdater qui vous notifie des nouvelles mises à jour de Clover.";
 
 // ----------------------------------------------------------------------------
-
-

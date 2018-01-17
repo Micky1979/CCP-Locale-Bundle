@@ -705,6 +705,7 @@ UEFI BIOS의 CSM모듈에 기반해있으므로 CSM이 활성화 되어야 합�
 대체로 UEFI 부트는 하드웨어 HVRAM을 이용하지만 간혹 이 드라이버가 필요할 수 있습니다.
 본 드라이버 없이는 문제가 있는 경우에 한해서 사용하십시오.";
 "OsxAptioFixDrv-64_description" = "AMI Aptio와 같은 UEFI 펌웨어 문제를 해결하기 위한 64비트 드라이버";
+"AptioMemoryFix_description" = "AMI Aptio와 같은 UEFI 펌웨어 문제를 해결하기 위한 64비트 드라이버";
 "OsxLowMemFixDrv-64_description" = "OsxAptioFixDrv의 간소화 형태(간소화되지 않는 버전과 함께 사용하지 마십시오)";
 "PartitionDxe-64_description" = "GPT/MBR 또는 Apple Partition Map과 같은 희귀 파티션맵을 지원하기 위한 64비트 드라이버.";
 "SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
@@ -716,7 +717,6 @@ UEFI BIOS의 CSM모듈에 기반해있으므로 CSM이 활성화 되어야 합�
 "HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
 "UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
 "AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-"OSInfo-64_description" = "Inform user about version of macOS (optional)";
 
 
 // ============================================================================

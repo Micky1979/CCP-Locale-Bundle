@@ -711,6 +711,7 @@ Normalmente ele já está presente mas algumas vezes pode não estar. Neste caso
 Normalmente o boot UEFI usa o Hardware NVRAM mas em alguns casos raros este driver é necessário.
 Use-o somente se você tiver problemas quando não o estiver utilizando";
 "OsxAptioFixDrv-64_description" = "Driver de 64bit para corrigir problemas de Memória em Firmware UEFI como em AMI Aptio BIOS";
+"AptioMemoryFix_description" = "Driver de 64bit para corrigir problemas de Memória em Firmware UEFI como em AMI Aptio BIOS";
 "OsxLowMemFixDrv-64_description" = "Versão simplificada do OsxAptioFixDrv, 64bit (não use os dois juntos)";
 "PartitionDxe-64_description" = "Driver de 64bit para suportar Esquemas de Partição não comuns como Híbrido GPT/MBR ou Apple Partition Map.";
 "SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
@@ -722,7 +723,6 @@ Use-o somente se você tiver problemas quando não o estiver utilizando";
 "HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
 "UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
 "AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-"OSInfo-64_description" = "Inform user about version of macOS (optional)";
 
 
 // ============================================================================

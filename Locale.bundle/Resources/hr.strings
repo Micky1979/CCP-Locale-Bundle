@@ -701,6 +701,7 @@ Uglavnom bi trebala biti prisutna,u slučaju da je nema pojavit će se poruka up
 "EmuVariableUefi-64_description" = "64 bitna verzija upravljačkog programa pruža podršku NVRAM varijabli za OSX. Uglavnom većina UEFI boot načina koristi hardver za NVRAM ali u nekim rijetkim slučajevima potrebam je i oavj upravljački program.
 Koristiti samo ako imate problema bez njega.";
 "OsxAptioFixDrv-64_description" = "64 bitna verzija upravljačkog programa koji popravlja probleme alociranja mamorije na AMI Aptio pločama. ";
+"AptioMemoryFix_description" = "64 bitna verzija upravljačkog programa koji popravlja probleme alociranja mamorije na AMI Aptio pločama. ";
 "OsxLowMemFixDrv-64_description" = "Pojednostavljena verzija OsxAptioFixDrv,64 bitna. ( nemojte koristiti obe verzije u isto vrijeme)";
 "PartitionDxe-64_description" = "64 bitni upravljački program za podršku ne uobičajenih particija poput  hybrid GPT/MBR ili Apple Partition Map";
 "SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
@@ -712,7 +713,6 @@ Koristiti samo ako imate problema bez njega.";
 "HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
 "UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
 "AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-"OSInfo-64_description" = "Inform user about version of macOS (optional)";
 
 
 // ============================================================================

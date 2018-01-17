@@ -701,6 +701,7 @@ Thông thường, giao thức này đã có sẵn, tuy nhiên cũng có những 
 Phần lớn các máy hỗ trợ UEFI sử dụng NVRAM phần cứng, tuy nhiên, trong một vài trường hợp hiếm gặp, driver này là bắt buộc.
 Chỉ dùng nếu bạn gặp vấn đề với NVRAM.";
 "OsxAptioFixDrv-64_description" = "64bit driver giúp sửa các lỗi liên quan đến bộ nhớ RAM trên các nền tảng   UEFI như AMI Aptio";
+"AptioMemoryFix_description" = "64bit driver giúp sửa các lỗi liên quan đến bộ nhớ RAM trên các nền tảng   UEFI như AMI Aptio";
 "OsxLowMemFixDrv-64_description" = "Biến thể được đơn giản hóa của OsxAptioFixDrv, 64bit (Không dùng 2 drivers cùng lúc)";
 "PartitionDxe-64_description" = "64bit driver hỗ trợ các bảng phân vùng không phổ biến như: hybrid GPT/MBR hoặc Apple Partition Map.";
 "SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
@@ -712,7 +713,6 @@ Chỉ dùng nếu bạn gặp vấn đề với NVRAM.";
 "HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
 "UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
 "AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-"OSInfo-64_description" = "Inform user about version of macOS (optional)";
 
 
 // ============================================================================
@@ -765,4 +765,3 @@ Phân vùng đích phải là phân vùng OS X khởi động được.";
 Có bao gồm CloverUpdater giúp thông báo các bản cập nhật Clover.";
 
 // ----------------------------------------------------------------------------
-
