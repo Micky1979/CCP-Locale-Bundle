@@ -128,6 +128,7 @@
 "Window" = "Window";
 "Minimize" = "Minimize";
 "Zoom" = "Zoom";
+"Float" = "Float";
 
 "Bring All to Front" = "Bring All to Front";
 "Help" = "Help";
@@ -331,6 +332,12 @@
 /* you are attempting to set a new config key with an empty array */
 "+ empty array to be filled" = "+ empty array to be filled";
 
+/* you are attempting to set a new config key with an empty dictionary */
+"+ empty dictionary to be filled" = "+ empty dictionary to be filled";
+
+/* you are attempting to set a new key/value example under ACPI->RenameDevices to be edited with your values (_SB.PCI0.RP02.PSXS = ARPT) */
+"+ ACPI->RenameDevices example to be edited" = "+ ACPI->RenameDevices example to be edited";
+
 /* you are attempting to set a new dictionary under Devices->AddProperties to be filled with your values (Device, Key and Value) */
 "+ dictionary for DropTables to be filled (Signature, TableId (optional), Length (optional))" = "+ dictionary for DropTables to be filled (Signature, TableId (optional), Length (optional))";
 
@@ -403,6 +410,7 @@
 "Bad Root node" = "Bad Root node";
 "Root node must be a Dictionary" = "Root node must be a Dictionary";
 
+"Please edit with your real key/value and remove '#' at the beginning" = "Please edit with your real key/value and remove '#' at the beginning";
 "value must be changed to a real one!" = "value must be changed to a real one!";
 "Signature is required, TableId and Length optionals" = "Signature is required, TableId and Length optionals";
 "Find/Replace required, Comment/Disabled optionals" = "Find/Replace required, Comment/Disabled optionals";
@@ -448,13 +456,11 @@
 "load config" = "load config";
 
 /* Menu item in the Clover Manager, if pressed will open the Clover Installer for the selected disk */
-"open Clover Installer" = "open Clover Installer";
+"Install Clover boot loader" = "Install Clover boot loader";
+"Install Clover's Extras only" = "Install Clover's Extras only";
 
 /* may be asked before the Clover's installer is shown */
 "Sorry you can't install Clover:\n\n- Un check \"Use your custom build..\" in the preferences.\n\n..or\n\n- build Clover!" = "Sorry you can't install Clover:\n\n- Un check \"Use your custom build..\" in the preferences.\n\n..or\n\n- build Clover!";
-
-/* may be asked before the Clover's installer is shown */
-"You can install Clover in this disk in UEFI mode,\nbut also in legacy mode (CloverEFI).\n\nIf you want to Install Clover in legacy mode and is the first time, ensure that one of boot0af or boot0ss, is selected:\n\nby desing only you decide if you want change your bootsectors and also because when this has already been done before, there is no reason to do so again.\n\nWARN:\nIf this is a supported Mac, please don't do that targeting an internal partition, but instead on an external disk. For the same reason don't install rc scripts on all volumes, but instead on the target only!" = "You can install Clover in this disk in UEFI mode,\nbut also in legacy mode (CloverEFI).\n\nIf you want to Install Clover in legacy mode and is the first time, ensure that one of boot0af or boot0ss, is selected:\n\nby desing only you decide if you want change your bootsectors and also because when this has already been done before, there is no reason to do so again.\n\nWARN:\nIf this is a supported Mac, please don't do that targeting an internal partition, but instead on an external disk. For the same reason don't install rc scripts on all volumes, but instead on the target only!";
 
 /* may be asked before the Clover's installer is shown */
 "You can install only Clover's extras on this disk,\nbut not the bootloader due to filesystem incompatibility" = "You can install only Clover's extras on this disk,\nbut not the bootloader due to filesystem incompatibility";
@@ -497,7 +503,7 @@
 /* used in "4,1MB of 10,1MB (450KB/sec)" */
 "of" = "of";
 
-"Clover is ready to be downloaded,\n\nbut you can also use your custom build if you have one. I this case look at the preference's menu and specify the path to your src folder and Clover Configurator Pro never will ask you this!\n\nNote:\nAt the app menu you can select \"Build_Clover\" to build Clover from source with Build_Clover.command:\nrequire an active internet connection and Xcode installed.. and Clover will be always up to date!" = "Clover is ready to be downloaded,\n\nbut you can also use your custom build if you have one. I this case look at the preference's menu and specify the path to your src folder and Clover Configurator Pro never will ask you this!\n\nNote:\nAt the app menu you can select \"Build_Clover\" to build Clover from source with Build_Clover.command:\nrequire an active internet connection and Xcode installed.. and Clover will be always up to date!";
+"Clover is ready to be downloaded,\n\nbut you can also use your custom build if you have one. I this case look at the preference's menu and specify the path to your src folder and Clover Configurator Pro never will ask you this!\n\nNote:\nAt the app menu you can select \"Build->Clover\" to build Clover from source:\nrequire an active internet connection and Xcode installed.. and Clover will be always up to date!" = "Clover is ready to be downloaded,\n\nbut you can also use your custom build if you have one. I this case look at the preference's menu and specify the path to your src folder and Clover Configurator Pro never will ask you this!\n\nNote:\nAt the app menu you can select \"Build->Clover\" to build Clover from source:\nrequire an active internet connection and Xcode installed.. and Clover will be always up to date!";
 
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -556,8 +562,14 @@
  Is a little label, please use a short description */
 "Max copies:" = "Max copies:";
 
-/* checkbox under the Preferences. If enabled (take effect on next run) the app will have a dark appearance */
-"Start in dark mode. Applied on next run." = "Start in dark mode. Applied on next run.";
+/* label under the Preferences. If enabled (take effect on next run) the app will have a dark appearance */
+"Appearance:" = "Appearance:";
+
+/* label under the Preferences. If enabled (take effect on next run) the app will have a dark appearance */
+"dark" = "dark";
+
+/* label under the Preferences. If enabled (take effect on next run) the app will have a light appearance */
+"light" = "light";
 
 /* checkbox under the Preferences.
  If enabled the app can show notifications on the upper right corner to help the user with reminders
@@ -596,7 +608,43 @@
 /* message of the Alert that shown when you open the NVRAM editor  */
 "Clover Configurator Pro is able to set your NVRAM by editing the editor at the left side.\nOn the right side is what currently is on IODeviceTree/options (i.e. the NVRAM) and is not editable.\n\nLIMITATIONS:\nkeys like \"csr-active-config\" may be not editable due to the SIP settings. If that happens an alert will popup with an error after pressing the \"set\" button. To avoid that, temporarily disable SIP in recovery mode or set a permissive value in config.plist (RtVariables->CsrActiveConfig->). You can also skip it by mark as active \"ignore csr-active-config\" but anyway macOS can deny adding/setting or deleting other keys." = "Clover Configurator Pro is able to set your NVRAM by editing the editor at the left side.\nOn the right side is what currently is on IODeviceTree/options (i.e. the NVRAM) and is not editable.\n\nLIMITATIONS:\nkeys like \"csr-active-config\" may be not editable due to the SIP settings. If that happens an alert will popup with an error after pressing the \"set\" button. To avoid that, temporarily disable SIP in recovery mode or set a permissive value in config.plist (RtVariables->CsrActiveConfig->). You can also skip it by mark as active \"ignore csr-active-config\" but anyway macOS can deny adding/setting or deleting other keys.";
 
+// ============================================================================
+// Clover installer
+// ----------------------------------------------------------------------------
+// following are missing from Clover packages:
+"drivers32_description" = "drivers 32 bit";
 
+"drivers64_description" = "drivers 64 bit";
+
+"drivers32UEFI_description" = "drivers 32 bit UEFI";
+
+"drivers64UEFI_description" = "drivers 64 bit UEFI";
+
+"Clover_description" = "Clover Loaders and mandatory drivers.";
+
+"apfs_description" = "APFS filesystem driver (10.13+).";
+
+"FAT_description" = "FAT32 filesystem driver.\nClover already has it's own.. but this is an updated version.";
+
+"GrubEXFAT_description" = "(Grub) EXFAT filesystem driver.";
+
+"HFSPlus_description" = "r/w HFS+ filesystem driver (sobstitute for VBoxHfs).";
+
+"GrubNTFS_description" = "GRUB NTFS filesystem driver (in case you don't have any other).";
+
+"GrubUDF_description" = "GRUB UDF filesystem driver (Universal Disk Format for CD/DVD).";
+
+"NvmExpressDxe_description" = "Driver you may need for NVME disks.";
+
+"NTFS_description" = "NTFS filesystem driver (sobstitute for GrubNTFS).";
+
+"AptioInputFix_description" = "Reference driver to shim AMI APTIO proprietary mouse & keyboard protocols for File Vault 2 GUI input support.\nhttps://github.com/vit9696/AptioFixPkg.";
+
+"OsxFatBinaryDrv_description" = "Mandatory driver until macOS 10.8 (not needed if boot.efi is 64 bit only).";
+
+"OsxAptioFix2Drv_description" = "OsxAptioFix2Drv is a reduced version of OsxAptioFixDrv without relocation blocks and may not works on some hardware or with older OS version. But this version supported Hibernation while first one no. No NVRAM support.";
+
+"OsxAptioFix3Drv_description" = "OsxAptioFix3Drv is a OsxAptioFix2Drv rev 4369 renamed to be different. This version supported NVRAM. More runtime fixes in 4379. This version can be improved by clover crew in future.";
 
 // Following coming directly from Clover source so if already in your language
 // please leave as is!
@@ -679,58 +727,101 @@ boot2 (在分区的根目录) 载入 /EFI/CLOVER/CLOVERIA32.efi 或 CLOVERX64.ef
 // ----------------------------------------------------------------------------
 "CloverEFI_title" = "CloverEFI";
 "CloverEFI_description" = "选择要安装的 CloverEFI 版本。";
-"cloverEFI.32_title" = "CloverEFI 32位版本";
-"cloverEFI.32_description" = "CloverEFI 32位版本";
+"cloverEFI.32_title" = "CloverEFI 32-bits";
+"cloverEFI.32_description" = "CloverEFI 32-bits";
 "cloverEFI.64.sata_title" = "CloverEFI 64位 SATA";
 "cloverEFI.64.sata_description" = "CloverEFI 64位版本，使用 SATA 模式存取硬盘。";
 "cloverEFI.64.blockio_title" = "CloverEFI 64位 BiosBlockIO";
 "cloverEFI.64.blockio_description" = "CloverEFI 64位版本，使用 Bios Block I/O 模式存取硬盘。";
-"cloverEFI.64.blockio2_title" = "CloverEFI 64-bits BiosBlockIO for NVIDIA NForce MCP79";
-"cloverEFI.64.blockio2_description" = "CloverEFI 64-bits using Bios Block I/O to access drives for chipset NVIDIA NForce MCP79";
+"cloverEFI.64.blockio2_title" = "CloverEFI 64位 BiosBlockIO";
+"cloverEFI.64.blockio2_description" = "CloverEFI 64位版本，使用 Bios Block I/O 模式存取硬盘。";
 
 // ============================================================================
 // Drivers
 // ----------------------------------------------------------------------------
+
 "Ps2KeyboardDxe-32_description" = "32位，PS/2 键盘 驱动。";
 "Ps2MouseAbsolutePointerDxe-32_description" = "32位，PS/2 触控板 驱动。";
 "Ps2MouseDxe-32_description" = "32位，PS/2 鼠标 驱动。";
-"Ps2MouseDxe-64_description" = "64位，PS/2 鼠标 驱动。";
 "UsbMouseDxe-32_description" = "32位，USB 鼠标 驱动。";
-"UsbMouseDxe-64_description" = "64位，USB 鼠标 驱动。";
 "VBoxExt2-32_description" = "32位，来自 Virtualbox 的 ext2/3 文件系统驱动。";
-"VBoxExt2-64_description" = "64位，来自 Virtualbox 的 ext2/3 文件系统驱动。";
 "VBoxExt4-32_description" = "32位，来自 Virtualbox 的 ext4 文件系统驱动。";
-"VBoxExt4-64_description" = "64位，来自 Virtualbox 的 ext4 文件系统驱动。";
 "XhciDxe-32_description" = "32位，XHCI USB 3.0 驱动。";
-"XhciDxe-64_description" = "64位，XHCI USB 3.0 驱动。";
-"CsmVideoDxe-64_description" = "64位，Clover GUI 图形使用者介面的显示驱动，允许选择更多分辨率。
+
+"Drivers64_title" = "BIOS Drivers, 64 bit";
+"Drivers64_description" = "Select drivers for BIOS-booting.";
+
+"Drivers64FV2_title" = "FileVault 2 BIOS Drivers, 64 bit";
+"Drivers64FV2_description" = "Select drivers for BIOS-booting with FileVault 2.";
+
+"ApfsDriverLoader-64_description" = "Supports APFS filesystem driver from container for macOS 10.14.";
+"AppleImageCodec-64_description" = "Decode PNG and BMP for FileVault2.";
+"AppleImageLoader-64_description" = "Secure AppleEfiFat binary driver with implementation of AppleLoadImage protocol with EfiBinary signature verification.";
+"AppleKeyAggregator-64_description" = "Support for boot UI dialog for FileVault2.";
+"AppleKeyFeeder-64_description" = "Support for PS/2 keyboard to use with FileVault2";
+"AppleUISupport-64_description" = "Set of protocols for support EfiLoginUi for FileVault.";
+"AppleUITheme-64_description" = "Create boot UI Themes support for FileVault2.";
+"AptioInputFix-64_description" = "Driver to fix input problems on UEFI firmware such as AMI Aptio.";
+"AptioMemoryFix-64_description" = "64位，提供 UEFI 固件的 内存问题修正，如 AMI Aptio 等。";
+"FirmwareVolume-64_description" = "Create FirmwareVolume with cursor images for FileVault2.";
+"FSInject-64_description" = "Provide injection of kernel extensions from Clover folder.";
+"GrubEXFAT-64_description" = "ExFAT filesystem driver.";
+"GrubISO9660-64_description" = "ISO9600 filesystem driver.";
+"GrubNTFS-64_description" = "NTFS filesystem driver.";
+"GrubUDF-64_description" = "UDF filesystem driver.";
+"SMCHelper-64_description" = "Restore SMC keys left in NVRAM by FakeSMC.";
+"XhciDxe-64_description" = "USB 3.0 driver, 64bit";
+
+"Drivers64UEFI_title" = "UEFI Drivers";
+"Drivers64UEFI_description" = "Select drivers for UEFI-booting.";
+
+"Drivers64UEFIFV2_title" = "FileVault 2 UEFI Drivers";
+"Drivers64UEFIFV2_description" = "Select drivers for UEFI-booting with FileVault 2.";
+
+"ApfsDriverLoader-64.UEFI_description" = "Supports APFS filesystem driver from container for macOS 10.14.";
+"AppleEvent-64.UEFI_description" = "Create AppleEvent protocol for FileVault2.";
+"AppleGraphicsConfig-64.UEFI_description" = "Create optional AppleGraphicsConfig protocol.";
+"AppleImageCodec-64.UEFI_description" = "Decode PNG and BMP for FileVault2.";
+"AppleImageLoader-64.UEFI_description" = "Secure AppleEfiFat binary driver with implementation of AppleLoadImage protocol with EfiBinary signature verification.";
+"AppleKeyAggregator-64.UEFI_description" = "Support for boot UI dialog for FileVault2.";
+"AppleKeyFeeder-64.UEFI_description" = "Support for PS/2 keyboard to use with FileVault2";
+"AppleUISupport-64.UEFI_description" = "Set of protocols for support EfiLoginUi for FileVault.";
+"AppleUITheme-64.UEFI_description" = "Create boot UI Themes support for FileVault2.";
+"AptioInputFix-64.UEFI_description" = "Driver to fix input problems on UEFI firmware such as AMI Aptio.";
+"AptioMemoryFix-64.UEFI_description" = "64位，提供 UEFI 固件的 内存问题修正，如 AMI Aptio 等。";
+"CsmVideoDxe-64.UEFI_description" = "64位，Clover GUI 图形使用者介面的显示驱动，允许选择更多分辨率。
 基于 UEFI BIOS 的 CSM module 模组，CSM 必须 Enabled 启动。
 Clover 可能无法启动，可能会发生 系统唤醒 的问题。使用时，请注意相关问题。";
-"DataHubDxe-64_description" = "64位，此 DataHub 协定支持 Mac OS X 强制启用。
+"DataHubDxe-64.UEFI_description" = "64位，此 DataHub 协定支持 Mac OS X 强制启用。
 通常已启用，但有时可能遗漏，可在屏幕 warning 中查看。";
-"EmuVariableUefi-64_description" = "64位，支持 Mac OS X 需要的 NVRAM 变数。
+"EmuVariableUefi-64.UEFI_description" = "64位，支持 Mac OS X 需要的 NVRAM 变数。
 大多数的 UEFI boot 使用硬件NVRAM，但是部份少见案例需要 EmuVariableUefi。
 建议只在 有问题时，才启用 EmuVariableUefi。";
-"OsxAptioFixDrv-64_description" = "64位，提供 UEFI 固件的 内存问题修正，如 AMI Aptio 等。";
-"AptioMemoryFix_description" = "64位，提供 UEFI 固件的 内存问题修正，如 AMI Aptio 等。";
-"OsxLowMemFixDrv-64_description" = "64位，提供 UEFI 固件的 内存问题修正，如 AMI Aptio 等。
+"EnglishDxe-64.UEFI_description" = "Support for UnicodeCollation protocol used by EFI Shell if it missed in UEFI.";
+"Fat-64.UEFI_description" = "FAT filesystem driver.";
+"FirmwareVolume-64.UEFI_description" = "Create FirmwareVolume with cursor images for FileVault2.";
+"FSInject-64.UEFI_description" = "Provide injection of kernel extensions from Clover folder.";
+"HashServiceFix-64.UEFI_description" = "Fix Hash support if absent in native UEFI BIOS.";
+"HFSPlus.UEFI_description" = "Alternate HFS+ filesystem driver.";
+"NvmExpressDxe-64.UEFI_description" = "Driver for support NVM Express devices.";
+"OsxAptioFix3Drv-64.UEFI_description" = "Alternate driver (v3) to fix Memory problems on UEFI firmware. Do not use with other AptioFix together.";
+"OsxAptioFixDrv-64.UEFI_description" = "Old 64-bits Driver to fix Memory problems on UEFI firmware such as AMI Aptio. Do not use with other AptioFix together.";
+"OsxFatBinaryDrv-64.UEFI_description" = "Driver for support FAT Binary executables for OS X 10.9 and older.";
+"OsxLowMemFixDrv-64.UEFI_description" = "64位，提供 UEFI 固件的 内存问题修正，如 AMI Aptio 等。
 为 OsxAptioFixDrv 的简化版本，请勿与 OsxAptioFixDrv 同时使用。";
-"PartitionDxe-64_description" = "64位，支持非常态的分区配置，如 hybrid GPT/MBR 或 Apple Partition Map。";
-"SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
-"AppleEvent-64_description" = "Create AppleEvent protocol for FileVault2";
-"AppleKeyAggregator-64_description" = "Support for boot UI dialog for FileVault2";
-"FirmwareVolume-64_description" = "Create FirmwareVolume with cursor images";
-"AppleImageCodec-64_description" = "For decode PNG and BMP images in boot UI";
-"AppleUITheme-64_description" = "Create boot UI Themes support";
-"HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
-"UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
-"AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-
+"PartitionDxe-64.UEFI_description" = "64位，支持非常态的分区配置，如 hybrid GPT/MBR 或 Apple Partition Map。";
+"Ps2MouseDxe-64.UEFI_description" = "64位，PS/2 鼠标 驱动。";
+"SMCHelper-64.UEFI_description" = "Restore SMC keys left in NVRAM by FakeSMC.";
+"UsbKbDxe-64.UEFI_description" = "Keyboard driver for boot UI support.";
+"UsbMouseDxe-64.UEFI_description" = "64位，USB 鼠标 驱动。";
+"VBoxExt2-64.UEFI_description" = "64位，来自 Virtualbox 的 ext2/3 文件系统驱动。";
+"VBoxExt4-64.UEFI_description" = "64位，来自 Virtualbox 的 ext4 文件系统驱动。";
+"VBoxHfs-64.UEFI_description" = "HFS+ filesystem driver.";
+"VBoxIso9600-64.UEFI_description" = "ISO 9600 filesystem driver.";
 
 // ============================================================================
 // Themes
 // ----------------------------------------------------------------------------
-
 "Themes_title" = "开机主题";
 "Themes_description" = "选择安装，开机时，显示的背景主题。";
 
@@ -738,25 +829,28 @@ Clover 可能无法启动，可能会发生 系统唤醒 的问题。使用时�
 "BGM_description" = "选择安装来自 Blackosx 的 BlackGreenMoody主题。
 安装位置 /EFI/CLOVER/themes/BGM。";
 
-"embedded_title" = "embedded";
-"embedded_description" = "embedded theme from Blackosx,
-Install to /EFI/CLOVER/themes/embedded";
+"embedded_title" = "Embedded";
+"embedded_description" = "选择安装来自 Blackosx 的 BlackGreen主题。
+安装位置 /EFI/CLOVER/themes/black_green。";
 
 "metal_title" = "Metal";
 "metal_description" = "选择安装来自 Slice 的原始 Metal 主题。
 安装位置 /EFI/CLOVER/themes/metal。";
 
-"random_title" = "random";
-"random_description" = "random theme from Slice,
+"clovy_title" = "Clovy";
+"clovy_description" = "Vector SVG theme from Clovy,
+Install to /EFI/CLOVER/themes/Clovy";
+
+"random_title" = "Random";
+"random_description" = "random theme,
 Install to /EFI/CLOVER/themes/random choose a theme from others";
 
-"steampunkblack_title" = "steampunkblack";
-"steampunkblack_description" = "steampunkblack theme from medik,
-Install to /EFI/CLOVER/themes/steampunkblack";
+"steampunkblack_title" = "SteamPunk Black";
+"steampunkblack_description" = "选择安装来自 Bijo 的 BootCamp 主题。
+安装位置 /EFI/CLOVER/themes/bootcamp。";
 
-"CloverThemeManager_title" = "CloverThemeManager.app";
-"CloverThemeManager_description" = "CloverThemeManager.app by blackosx,
-keeps your Themes up to date, remove or install them by choosing from a wide selection.
+"CloverThemeManager_title" = "Clover 主题";
+"CloverThemeManager_description" = "CloverThemeManager.app by blackosx keeps your Themes up to date, remove or install them by choosing from a wide selection.
 Install to /Applications";
 // ============================================================================
 // RC Scripts
@@ -766,7 +860,8 @@ Install to /Applications";
 目标磁区必须是 可开机的 OSX 磁区。";
 "rc.scripts.on.all.volumes_title" = "安装全部 RC scripts 到全部可开机的 OSX 磁区";
 "rc.scripts.on.all.volumes_description" = "安装全部 RC scripts 到全部内置可开机的 OSX 磁区。";
-"Optional RC Scripts" = "选择安装 RC Scripts";
+"OptionalRCScripts" = "选择安装 RC Scripts";
+"disable_sleep_proxy_client_title" = "Disable sleep proxy client";
 "disable_sleep_proxy_client_description" = "停用 mDNSResponder 休眠 proxy client 服务，可以避免系统休眠时，每小时自动唤醒。";
 
 // ============================================================================

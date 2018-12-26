@@ -128,6 +128,7 @@
 "Window" = "Окно";
 "Minimize" = "Свернуть";
 "Zoom" = "Изменить масштаб";
+"Float" = "Tерка";
 
 "Bring All to Front" = "Показать все";
 "Help" = "Справка";
@@ -331,6 +332,12 @@
 /* you are attempting to set a new config key with an empty array */
 "+ empty array to be filled" = "+ пустой массив, который нужно отредактировать";
 
+/* you are attempting to set a new config key with an empty dictionary */
+"+ empty dictionary to be filled" = "+ пустой словарь для редактирования";
+
+/* you are attempting to set a new key/value example under ACPI->RenameDevices to be edited with your values (_SB.PCI0.RP02.PSXS = ARPT) */
+"+ ACPI->RenameDevices example to be edited" = "+ ACPI->RenameDevices пример для редактирования";
+
 /* you are attempting to set a new dictionary under Devices->AddProperties to be filled with your values (Device, Key and Value) */
 "+ dictionary for DropTables to be filled (Signature, TableId (optional), Length (optional))" = "+ словарь для DropTables для редактирования (Signature, TableId (необязательно), Length (необязательно))";
 
@@ -403,6 +410,7 @@
 "Bad Root node" = "Бад Rоот узел";
 "Root node must be a Dictionary" = "Корневой узел должен быть словарем";
 
+"Please edit with your real key/value and remove '#' at the beginning" = "Измените свой реальный ключ/значение, и удалите '#' в начале";
 "value must be changed to a real one!" = "значение должно быть изменено на реальное!";
 "Signature is required, TableId and Length optionals" = "Signature требуется, TableId и Length являются опциями";
 "Find/Replace required, Comment/Disabled optionals" = "Требуется Find/Replace, Comment/Disabled - это опции";
@@ -448,13 +456,11 @@
 "load config" = "открыть config.plist";
 
 /* Menu item in the Clover Manager, if pressed will open the Clover Installer for the selected disk */
-"open Clover Installer" = "откройте установщик Clover";
+"Install Clover boot loader" = "Install Clover boot loader";
+"Install Clover's Extras only" = "Install Clover's Extras only";
 
 /* may be asked before the Clover's installer is shown */
 "Sorry you can't install Clover:\n\n- Un check \"Use your custom build..\" in the preferences.\n\n..or\n\n- build Clover!" = "Извините, вы не можете установить Clover:\n\nИзмените настройки или создайте Clover из исходного кода!";
-
-/* may be asked before the Clover's installer is shown */
-"You can install Clover in this disk in UEFI mode,\nbut also in legacy mode (CloverEFI).\n\nIf you want to Install Clover in legacy mode and is the first time, ensure that one of boot0af or boot0ss, is selected:\n\nby desing only you decide if you want change your bootsectors and also because when this has already been done before, there is no reason to do so again.\n\nWARN:\nIf this is a supported Mac, please don't do that targeting an internal partition, but instead on an external disk. For the same reason don't install rc scripts on all volumes, but instead on the target only!" = "You can install Clover in this disk in UEFI mode,\nbut also in legacy mode (CloverEFI).\n\nIf you want to Install Clover in legacy mode and is the first time, ensure that one of boot0af or boot0ss, is selected:\n\nby desing only you decide if you want change your bootsectors and also because when this has already been done before, there is no reason to do so again.\n\nWARN:\nIf this is a supported Mac, please don't do that targeting an internal partition, but instead on an external disk. For the same reason don't install rc scripts on all volumes, but instead on the target only!";
 
 /* may be asked before the Clover's installer is shown */
 "You can install only Clover's extras on this disk,\nbut not the bootloader due to filesystem incompatibility" = "You can install only Clover's extras on this disk,\nbut not the bootloader due to filesystem incompatibility";
@@ -497,7 +503,7 @@
 /* used in "4,1MB of 10,1MB (450KB/sec)" */
 "of" = "из";
 
-"Clover is ready to be downloaded,\n\nbut you can also use your custom build if you have one. I this case look at the preference's menu and specify the path to your src folder and Clover Configurator Pro never will ask you this!\n\nNote:\nAt the app menu you can select \"Build_Clover\" to build Clover from source with Build_Clover.command:\nrequire an active internet connection and Xcode installed.. and Clover will be always up to date!" = "Clover is ready to be downloaded,\n\nbut you can also use your custom build if you have one. I this case look at the preference's menu and specify the path to your src folder and Clover Configurator Pro never will ask you this!\n\nNote:\nAt the app menu you can select \"Build_Clover\" to build Clover from source with Build_Clover.command:\nrequire an active internet connection and Xcode installed.. and Clover will be always up to date!";
+"Clover is ready to be downloaded,\n\nbut you can also use your custom build if you have one. I this case look at the preference's menu and specify the path to your src folder and Clover Configurator Pro never will ask you this!\n\nNote:\nAt the app menu you can select \"Build->Clover\" to build Clover from source:\nrequire an active internet connection and Xcode installed.. and Clover will be always up to date!" = "Clover is ready to be downloaded,\n\nbut you can also use your custom build if you have one. I this case look at the preference's menu and specify the path to your src folder and Clover Configurator Pro never will ask you this!\n\nNote:\nAt the app menu you can select \"Build->Clover\" to build Clover from source:\nrequire an active internet connection and Xcode installed.. and Clover will be always up to date!";
 
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -556,8 +562,14 @@
  Is a little label, please use a short description */
 "Max copies:" = "Максимальное количество копий:";
 
-/* checkbox under the Preferences. If enabled (take effect on next run) the app will have a dark appearance */
-"Start in dark mode. Applied on next run." = "Начните в темном режиме. Применяется к следующему запуску.";
+/* label under the Preferences. If enabled (take effect on next run) the app will have a dark appearance */
+"Appearance:" = "Appearance:";
+
+/* label under the Preferences. If enabled (take effect on next run) the app will have a dark appearance */
+"dark" = "dark";
+
+/* label under the Preferences. If enabled (take effect on next run) the app will have a light appearance */
+"light" = "light";
 
 /* checkbox under the Preferences.
  If enabled the app can show notifications on the upper right corner to help the user with reminders
@@ -596,172 +608,250 @@
 /* message of the Alert that shown when you open the NVRAM editor  */
 "Clover Configurator Pro is able to set your NVRAM by editing the editor at the left side.\nOn the right side is what currently is on IODeviceTree/options (i.e. the NVRAM) and is not editable.\n\nLIMITATIONS:\nkeys like \"csr-active-config\" may be not editable due to the SIP settings. If that happens an alert will popup with an error after pressing the \"set\" button. To avoid that, temporarily disable SIP in recovery mode or set a permissive value in config.plist (RtVariables->CsrActiveConfig->). You can also skip it by mark as active \"ignore csr-active-config\" but anyway macOS can deny adding/setting or deleting other keys." = "Clover Configurator Pro is able to set your NVRAM by editing the editor at the left side.\nOn the right side is what currently is on IODeviceTree/options (i.e. the NVRAM) and is not editable.\n\nLIMITATIONS:\nkeys like \"csr-active-config\" may be not editable due to the SIP settings. If that happens an alert will popup with an error after pressing the \"set\" button. To avoid that, temporarily disable SIP in recovery mode or set a permissive value in config.plist (RtVariables->CsrActiveConfig->). You can also skip it by mark as active \"ignore csr-active-config\" but anyway macOS can deny adding/setting or deleting other keys.";
 
+// ============================================================================
+// Clover installer
+// ----------------------------------------------------------------------------
+// following are missing from Clover packages:
+"drivers32_description" = "drivers 32 bit";
 
+"drivers64_description" = "drivers 64 bit";
+
+"drivers32UEFI_description" = "drivers 32 bit UEFI";
+
+"drivers64UEFI_description" = "drivers 64 bit UEFI";
+
+"Clover_description" = "Clover Loaders and mandatory drivers.";
+
+"apfs_description" = "APFS filesystem driver (10.13+).";
+
+"FAT_description" = "FAT32 filesystem driver.\nClover already has it's own.. but this is an updated version.";
+
+"GrubEXFAT_description" = "(Grub) EXFAT filesystem driver.";
+
+"HFSPlus_description" = "r/w HFS+ filesystem driver (sobstitute for VBoxHfs).";
+
+"GrubNTFS_description" = "GRUB NTFS filesystem driver (in case you don't have any other).";
+
+"GrubUDF_description" = "GRUB UDF filesystem driver (Universal Disk Format for CD/DVD).";
+
+"NvmExpressDxe_description" = "Driver you may need for NVME disks.";
+
+"NTFS_description" = "NTFS filesystem driver (sobstitute for GrubNTFS).";
+
+"AptioInputFix_description" = "Reference driver to shim AMI APTIO proprietary mouse & keyboard protocols for File Vault 2 GUI input support.\nhttps://github.com/vit9696/AptioFixPkg.";
+
+"OsxFatBinaryDrv_description" = "Mandatory driver until macOS 10.8 (not needed if boot.efi is 64 bit only).";
+
+"OsxAptioFix2Drv_description" = "OsxAptioFix2Drv is a reduced version of OsxAptioFixDrv without relocation blocks and may not works on some hardware or with older OS version. But this version supported Hibernation while first one no. No NVRAM support.";
+
+"OsxAptioFix3Drv_description" = "OsxAptioFix3Drv is a OsxAptioFix2Drv rev 4369 renamed to be different. This version supported NVRAM. More runtime fixes in 4379. This version can be improved by clover crew in future.";
 
 // Following coming directly from Clover source so if already in your language
 // please leave as is!
 // ============================================================================
 // Installation
 // ----------------------------------------------------------------------------
-"UEFI.only_title" = "Установить Кловер только для UEFI загрузки, нет легаси.";
-"UEFI.only_description" = "Установить Кловер только для UEFI загрузки (нет легаси)";
+"UEFI.only_title" = "Установить Clover только для UEFI-загрузки";
+"UEFI.only_description" = "Устанавливает Clover только для UEFI-загрузки (BIOS-загрузка не возможна) на выбранный том или на раздел EFI, если выбран вариант Установить Clover на разделе EFI (ESP).";
 
 // ============================================================================
 // Target
 // ----------------------------------------------------------------------------
-"Target.ESP_title" = "Установить Clover на EFI раздел (ESP)";
-"Target.ESP_description" = "Установить Кловер на ESP (EFI System Partition) указанного тома
-
-Раздел ESP должен быть отформатирован в FAT32 (так оно и есть изначально)
-
-Если нет, то из терминала делаем следующие команды:
+"Target.ESP_title" = "Установить Clover на раздел EFI (ESP)";
+"Target.ESP_description" = "Устанавливает Clover на раздел ESP (EFI System Partition) выбранного тома. Раздел ESP должен быть отформатирован в FAT32.
+Отформатировать раздел можно в Терминале следующими командами:
 diskutil list
-newfs_msdos -v EFI -F 32 /dev/rdisk9s1";
+newfs_msdos -v EFI -F 32 /dev/rdisk0s1
+где rdisk0s1 – нужные номера диска и раздела.";
 
 // ============================================================================
 // Bootloader
 // ----------------------------------------------------------------------------
 
-"Bootloader_title" = "Загрузчик";
-"Bootloader_description" = "Clover EFI требует наличия трех основных файлов. (упрощенно)
-boot0 (главная загрузочная запись) отвечает за загрузку boot1.
-boot1 (загрузочная запись раздела) для загрузки boot.
-boot  (в корне выбранного раздела) для поиска /EFI/CLOVER/CLOVERIA32.efi или CLOVERX64.efi";
+"Bootloader_title" = "Загрузочные секторы";
+"Bootloader_description" = "Clover EFI требует наличия трех основных файлов (упрощенно):
+• boot0 (главная загрузочная запись) отвечает за загрузку boot1;
+• boot1 (загрузочная запись раздела) для загрузки boot;
+• boot  (в корне выбранного раздела) для поиска /EFI/CLOVER/CLOVERIA32.efi или CLOVERX64.efi.";
 
-"boot0af_title" = "Установить boot0af на MBR";
-"boot0af_description" = "Используется для БИОС загрузки.
-boot0af (boot0 Active First) ищет активный раздел в МБР таблице. Если не найдено, то грузит первый раздел EFI/FAT32/HFS с загрузочной сигнатурой.
-При таком выборе инсталлятор ставит активный флаг на этот раздел.";
+"boot0af_title" = "Установить boot0af на диск с MBR";
+"boot0af_description" = "Используется для BIOS-загрузки.
+boot0af (boot0 Active First) ищет активный раздел в таблице MBR. Если такого раздела нет, будет загружен первый из разделов EFI/FAT32/HFS с загрузочной сигнатурой и этот раздел будет помечен как активный.";
 
-"boot0ss_title" = "Установить boot0ss на MBR";
-"boot0ss_description" = "Используется для легаси загрузки.
-boot0ss (boot0 Signature Scanning) ищет первый раздел типа EFI/FAT32/HFS сначала в таблице MBR, затем в GPT, с правильной сигнатурой. Если таковых не найдено, будет пытаться загрузить активный раздел из MBR.Этот вариант является хорошим выбором, если Windows установлен на том же диске, поскольку Windows требует, чтобы раздел был активным. В этом варианте инсталлятор не активирует выбранный раздел.";
+"boot0ss_title" = "Установить boot0ss на диск с MBR";
+"boot0ss_description" = "Используется для BIOS-загрузки.
+boot0ss (boot0 Signature Scanning) ищет первый раздел типа EFI/FAT32/HFS с правильной сигнатурой сначала в таблице MBR, затем в GPT. Если таковых не найдено, будет пытаться загрузить активный раздел из MBR.
+Этот вариант является хорошим выбором, если Windows установлен на том же диске, поскольку Windows требует, чтобы раздел был активным (при этом Установщик не активирует выбранный раздел).";
 
-"bootNo_title" = "Не обновлять сектора MBR и PBR";
-"bootNo_description" = "Не устанавливать сектора для BIOS загрузки (boot0X, boot1X).
-Имеет смысл если у вас только UEFI загрузка,
-А также если вы просто не хотите заменять существующие сектора.";
+"bootNo_title" = "Не обновлять секторы MBR и PBR";
+"bootNo_description" = "Не устанавливать секторы для BIOS-загрузки (boot0X, boot1X).
+Выберите этот пункт если используете UEFI-загрузку или не хотите заменять установленные ранее секторы.";
 
 "AltBoot_title" = "Использовать PBR с выбором загрузки";
-"AltBoot_description" = "Установить альтернативный сектор boot1 позволяющий
-выбрать разные загрузчики (boot1, boot3, boot7) нажатием клавиши в паузе 2 секунды.
-Загрузить файл boot{цифра}";
+"AltBoot_description" = "Устанавливает альтернативный сектор boot1, позволяющий выбрать разные загрузчики (boot1, boot3, boot7) нажатием клавиши в паузе 2 секунды.
+Для выбора загрузчика нажмите клавишу с соответствующей цифрой.";
 
 
-"boot32_title" = "Установить 32 битный загрузчик первым";
+"boot32_title" = "Установить 32-битный загрузчик первым";
 "boot32_description" = "Установить файлы и поставить 32 бита по умолчанию.
-По умолчанию грузится boot = Clover 32 после 2 секунд ожидания клавиатуры.
-Клавиша 1 для boot1 = Chameleon boot,
-Клавиша 3 для boot3 = Clover EFI 32bit boot,
-Клавиша 6 для boot6 = Clover EFI 64bit boot.";
+По умолчанию грузится boot = Clover 32 bit после 2 секунд ожидания клавиатуры.
+Клавиша 1 для boot1 = Chameleon boot;
+Клавиша 3 для boot3 = Clover EFI 32 bit boot;
+Клавиша 6 для boot6 = Clover EFI 64 bit boot.";
 
-"boot64_title" = "Установить 64 битный загрузчик первым";
+"boot64_title" = "Установить 64-битный загрузчик первым.";
 "boot64_description" = "Установить файлы и поставить 64 бита по умолчанию.
-По умолчанию грузится boot = Clover 64 после 2 секунд ожидания клавиатуры.
-Клавиша 1 для boot1 = Chameleon boot,
-Клавиша 3 для boot3 = Clover EFI 32bit boot,
-Клавиша 6 для boot6 = Clover EFI 64bit boot.";
+По умолчанию грузится boot = Clover 64 bit после 2 секунд ожидания клавиатуры.
+Клавиша 1 для boot1 = Chameleon boot;
+Клавиша 3 для boot3 = Clover EFI 32 bit boot;
+Клавиша 6 для boot6 = Clover EFI 64 bit boot.";
 
 // ============================================================================
 // CloverEFI
 // ----------------------------------------------------------------------------
-"CloverEFI_title" = "CloverEFI";
-"CloverEFI_description" = "Выбрать вариант установки CloverEFI.";
+"CloverEFI_title" = "Clover для BIOS-загрузки";
+"CloverEFI_description" = "Варианты установки Clover-а для BIOS-загрузки (для систем без UEFI) с драйверами доступа к дискам.";
 "cloverEFI.32_title" = "CloverEFI 32-bits";
 "cloverEFI.32_description" = "CloverEFI 32-bits";
-"cloverEFI.64.sata_title" = "CloverEFI 64-bits SATA";
-"cloverEFI.64.sata_description" = "CloverEFI 64-bits с драйвером SATA";
-"cloverEFI.64.blockio_title" = "CloverEFI 64-bits BiosBlockIO";
-"cloverEFI.64.blockio_description" = "CloverEFI 64-bits с драйвером Bios Block I/O для доступа к дискам";
-"cloverEFI.64.blockio2_title" = "Кловер EFI 64-бит BiosBlockIO для NVIDIA NForce MCP79";
-"cloverEFI.64.blockio2_description" = "CloverEFI 64-bits с драйвером Bios Block I/O для доступа к дискам по чипсету NVIDIA NForce MCP79";
+"cloverEFI.64.sata_title" = "Clover EFI с драйвером SATA";
+"cloverEFI.64.sata_description" = "Clover EFI (64 бита) с драйвером SATA.";
+"cloverEFI.64.blockio_title" = "Clover EFI с драйвером Bios Block I/O";
+"cloverEFI.64.blockio_description" = "Clover EFI (64 бита) с драйвером Bios Block I/O.";
+"cloverEFI.64.blockio2_title" = "Clover EFI Bios Block I/O для NForce MCP79";
+"cloverEFI.64.blockio2_description" = "Clover EFI (64 бита) с драйвером Bios Block I/O доступа к дискам для чипсета NVIDIA NForce MCP79";
 
 // ============================================================================
 // Drivers
 // ----------------------------------------------------------------------------
-"Ps2KeyboardDxe-32_description" = "Драйвер PS2 клавиатуры (только для оболочки Кловера, не для системы!), 32бита";
-"Ps2MouseAbsolutePointerDxe-32_description" = "Драйвер PS2 тачпада (только для оболочки Кловера, не для системы!), 32бита";
-"Ps2MouseDxe-32_description" = "Драйвер для PS2 мыши, 32бита";
-"Ps2MouseDxe-64_description" = "Драйвер для PS2 мыши, 64 бита";
-"UsbMouseDxe-32_description" = "Драйвер для USB мыши, 32бита";
-"UsbMouseDxe-64_description" = "Драйвер для USB мыши, 64бита";
-"VBoxExt2-32_description" = "Драйвер файловой системы EXT2/3 (Linux), 32бит";
-"VBoxExt2-64_description" = "Драйвер файловой системы EXT2/3 (Linux), 64бит";
-"VBoxExt4-32_description" = "Драйвер файловой системы EXT4 (Linux), 32бит";
-"VBoxExt4-64_description" = "Драйвер файловой системы EXT4 (Linux), 64бит";
-"XhciDxe-32_description" = "Драйвер для USB 3.0, 32бита";
-"XhciDxe-64_description" = "Драйвер для USB 3.0, 64бита";
-"CsmVideoDxe-64_description" = "Видео драйвер для Clover GUI позволяющий использовать большее разрешение экрана.
-Он основан на CSM модуле в BIOS и требует, чтобы CSM был включен
-Однако, Clover может не запуститься с этим драйвером, или система не будет пробуждаться после сна,
-поэтому, используйте с осторожностью.";
-"DataHubDxe-64_description" = "Продержка DataHub протокола, который строго необходим для запуска MacOSX.
-Обычно он и так присутствует, однако может и не быть, в этом случае увидите сообщение на экране.";
-"EmuVariableUefi-64_description" = "Драйвер для поддержки NVRAM переменных, необходимых для MacOSX.
-Чаще всего UEFI BIOS использует встроенный NVRAM, но иногда нет
-Используйте драйвер только если вы точно знаете, что он нужен.";
-"OsxAptioFixDrv-64_description" = "Исправляет ошибки памяти, создаваемые AMI Aptio UEFi, и некоторыми другими BIOS.";
-"AptioMemoryFix_description" = "Исправляет ошибки памяти, создаваемые AMI Aptio UEFi, и некоторыми другими BIOS.";
-"OsxLowMemFixDrv-64_description" = "Упрощенный вариант драйвера OsxAptioFixDrv. Не использовать совместно.";
-"PartitionDxe-64_description" = "Драйвер для поддержки необычных схем разделов как гибрид GPT/MBR и Apple Partition Map.";
-"SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
-"AppleEvent-64_description" = "Create AppleEvent protocol for FileVault2";
-"AppleKeyAggregator-64_description" = "Support for boot UI dialog for FileVault2";
-"FirmwareVolume-64_description" = "Create FirmwareVolume with cursor images";
-"AppleImageCodec-64_description" = "For decode PNG and BMP images in boot UI";
-"AppleUITheme-64_description" = "Create boot UI Themes support";
-"HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
-"UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
-"AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
 
+"Ps2KeyboardDxe-32_description" = "Драйвер клавиатуры PS/2 для интерфейса Clover-а, 32 бита.";
+"Ps2MouseAbsolutePointerDxe-32_description" = "Драйвер тачпада PS/2 для интерфейса Clover-а, 32 бита.";
+"Ps2MouseDxe-32_description" = "Драйвер для мыши PS/2, 32 бита.";
+"UsbMouseDxe-32_description" = "Драйвер для мыши USB, 32 бита.";
+"VBoxExt2-32_description" = "Драйвер файловой системы EXT2/3 (Linux), 32 бита.";
+"VBoxExt4-32_description" = "Драйвер файловой системы EXT4 (Linux), 32 бита.";
+"XhciDxe-32_description" = "Драйвер для USB 3.0, 32 бита.";
+
+"Drivers64_title" = "Драйверы для BIOS-загрузки";
+"Drivers64_description" = "Выберите драйверы для режима загрузки из BIOS.";
+
+"Drivers64FV2_title" = "FileVault 2 BIOS Drivers, 64 bit";
+"Drivers64FV2_description" = "Выберите драйверы для загрузки BIOS с помощью FileVault 2.";
+
+"ApfsDriverLoader-64_description" = "Поддержка загрузки оригинального драйвера файловой системы APFS из контейнера. Необходим для macOS 10.13 и выше.";
+"AppleImageCodec-64_description" = "Декодер изображений в форматах PNG и BMP. Необходим для работы FileVault 2.";
+"AppleImageLoader-64_description" = "Драйвер, реализующий поддержку протокола AppleLoadImage с верификацией исполняемых бинарных модулей Apple.";
+"AppleKeyAggregator-64_description" = "Поддержка протокола авторизации пользователя для FileVault 2.";
+"AppleKeyFeeder-64_description" = "Поддержка клавиатур PS/2 для использования с FileVault 2.";
+"AppleUISupport-64_description" = "Поддержка EFI Login UI для FileVault. Функционально заменяет собой драйверы AppleKeyMapAggregator, AppleEvent, AppleUITheme, FirmwareVolume и AppleImageCodec.";
+"AppleUITheme-64_description" = "Поддержка протокола для отображения фонового изображения при использовании FileVault 2.";
+"AptioInputFix-64_description" = "Исправляет ошибки UEFI при работе с устройствами ввода.";
+"AptioMemoryFix-64_description" = "Исправляет ошибки памяти, имеющиеся в AMI Aptio и некоторымх других UEFI.
+Не использовать совместно с другими AptioFix.";
+"FirmwareVolume-64_description" = "Поддержка протокола FirmwareVolume для FileVault 2.";
+"FSInject-64_description" = "Поддержка загрузки расширений ядра из папок, расположенных внутри папки EFI.";
+"GrubEXFAT-64_description" = "Поддержка файловой системы ExFAT.";
+"GrubISO9660-64_description" = "Поддержка файловой системы ISO 9600.";
+"GrubNTFS-64_description" = "Поддержка файловой системы NTFS.";
+"GrubUDF-64_description" = "Поддержка файловой системы UDF.";
+"SMCHelper-64_description" = "Восстанавливает значения переменных NVRAM для расширения FakeSMC при загрузке системы.";
+"XhciDxe-64_description" = "Поддержка USB 3.0, 64 бита.";
+
+"Drivers64UEFI_title" = "Драйверы для UEFI-загрузки";
+"Drivers64UEFI_description" = "Выберите драйверы для загрузки посредством UEFI.";
+
+"Drivers64UEFIFV2_title" = "Драйверы для FileVault 2 UEFI-загрузки";
+"Drivers64UEFIFV2_description" = "Выберите драйверы для загрузки UEFI с помощью FileVault 2.";
+
+"ApfsDriverLoader-64.UEFI_description" = "Поддержка загрузки оригинального драйвера файловой системы APFS из контейнера. Необходим для macOS 10.13 и выше.";
+"AppleEvent-64.UEFI_description" = "Поддержка протокола AppleEvent для FileVault 2.";
+"AppleGraphicsConfig-64.UEFI_description" = "Поддержка протокола AppleGraphicsConfig.";
+"AppleImageCodec-64.UEFI_description" = "Декодер изображений в форматах PNG и BMP. Необходим для работы FileVault 2.";
+"AppleImageLoader-64.UEFI_description" = "Драйвер, реализующий поддержку протокола AppleLoadImage с верификацией исполняемых бинарных модулей Apple.";
+"AppleKeyAggregator-64.UEFI_description" = "Поддержка протокола авторизации пользователя для FileVault 2.";
+"AppleKeyFeeder-64.UEFI_description" = "Поддержка клавиатур PS/2 для использования с FileVault 2.";
+"AppleUISupport-64.UEFI_description" = "Поддержка EFI Login UI для FileVault. Функционально заменяет собой драйверы AppleKeyMapAggregator, AppleEvent, AppleUITheme, FirmwareVolume и AppleImageCodec.";
+"AppleUITheme-64.UEFI_description" = "Поддержка протокола для отображения фонового изображения при использовании FileVault 2.";
+"AptioInputFix-64.UEFI_description" = "Исправляет ошибки UEFI при работе с устройствами ввода.";
+"AptioMemoryFix-64.UEFI_description" = "Исправляет ошибки памяти, имеющиеся в AMI Aptio и некоторымх других UEFI.
+Не использовать совместно с другими AptioFix.";
+"CsmVideoDxe-64.UEFI_description" = "Позволяет использовать большие разрешения экрана в графическом интерфейсе Clover-а.
+Драйвер основан на модуле CSM в BIOS и требует, чтобы CSM был включен. На некоторых конфигурациях Clover может не запуститься с этим драйвером или система не будет пробуждаться после сна, поэтому используйте с осторожностью.";
+"DataHubDxe-64.UEFI_description" = "Продержка протокола DataHub, который строго необходим для запуска macOS. Обычно он присутствует (если нет, на экран будет выведено сообщение).";
+"EmuVariableUefi-64.UEFI_description" = "Драйвер для поддержки переменных NVRAM, необходимых macOS.
+Современные системы обычно имеют встроенный NVRAM. Используйте драйвер только если вы уверены, что встроенный NVRAM отсутствует или не работает.";
+"EnglishDxe-64.UEFI_description" = "Поддержка протокола UnicodeCollation для EFI Shell, если он отсутствует в UEFI.";
+"Fat-64.UEFI_description" = "Поддержка файловой системы FAT.";
+"FirmwareVolume-64.UEFI_description" = "Поддержка протокола FirmwareVolume для FileVault 2.";
+"FSInject-64.UEFI_description" = "Поддержка загрузки расширений ядра из папок, расположенных внутри папки EFI.";
+"HashServiceFix-64.UEFI_description" = "Функционал хеширования для тех UEFI-систем, где он отсутствует.";
+"HFSPlus.UEFI_description" = "Поддержка файловой системы HFS+ (альтернативный драйвер).";
+"NvmExpressDxe-64.UEFI_description" = "Поддержка протоколов NVM Express для твердотельных накопителей.";
+"OsxAptioFix3Drv-64.UEFI_description" = "Альтернативный драйвер (3) коррекции ошибок памяти UEFI.
+Исправляет работу с NVRAM.";
+"OsxAptioFixDrv-64.UEFI_description" = "Старый вариант коррекции ошибок памяти для AMI Aptio и некоторымх других UEFI.
+Не использовать совместно с другими AptioFix.";
+"OsxFatBinaryDrv-64.UEFI_description" = "Поддержка формата FAT Binary для систем 10.9 и более ранних.";
+"OsxLowMemFixDrv-64.UEFI_description" = "Упрощенный вариант драйвера OsxAptioFix.
+Не использовать совместно с другими AptioFix.";
+"PartitionDxe-64.UEFI_description" = "Поддержка необычных схем разделов: гибрид GPT/MBR, Apple Partition Map и др.";
+"Ps2MouseDxe-64.UEFI_description" = "Драйвер для мыши PS/2.";
+"SMCHelper-64.UEFI_description" = "Восстанавливает значения переменных NVRAM для расширения FakeSMC при загрузке системы.";
+"UsbKbDxe-64.UEFI_description" = "Драйвер клавиатуры USB.";
+"UsbMouseDxe-64.UEFI_description" = "Драйвер для мыши USB.";
+"VBoxExt2-64.UEFI_description" = "Поддержка файловых систем EXT2 и EXT3 (Linux).";
+"VBoxExt4-64.UEFI_description" = "Поддержка файловой системы EXT4 (Linux).";
+"VBoxHfs-64.UEFI_description" = "Поддержка файловой системы HFS+.";
+"VBoxIso9600-64.UEFI_description" = "Поддержка файловой системы ISO 9600.";
 
 // ============================================================================
 // Themes
 // ----------------------------------------------------------------------------
-
-"Themes_title" = "Тема";
+"Themes_title" = "Темы интерфейса";
 "Themes_description" = "Выберите темы для установки.";
 
-"BGM_title" = "Black_Green_Moody";
-"BGM_description" = "BGM (Тоскливо-зеленая) тема от Blackosx,
-Установить в /EFI/CLOVER/themes/BGM.";
+"BGM_title" = "Тоскливо-зеленая";
+"BGM_description" = "BGM (Тоскливо-зеленая) тема от Blackosx.
+Установка будет выполнена в /EFI/CLOVER/themes/BGM.";
 
-"embedded_title" = "embedded";
+"embedded_title" = "Встроенная";
 "embedded_description" = "embedded theme from Blackosx,
 Install to /EFI/CLOVER/themes/embedded";
 
 "metal_title" = "metal";
-"metal_description" = "Нержавейка от Slice,
-Установить в /EFI/CLOVER/themes/metal.";
+"metal_description" = "Нержавейка от Slice.
+Установка будет выполнена в /EFI/CLOVER/themes/metal";
 
-"random_title" = "random";
-"random_description" = "random theme from Slice,
-Install to /EFI/CLOVER/themes/random choose a theme from others";
+"clovy_title" = "Clovy";
+"clovy_description" = "Векторная тема от Clovy.
+Установка будет выполнена в /EFI/CLOVER/themes/Clovy";
 
-"steampunkblack_title" = "steampunkblack";
-"steampunkblack_description" = "steampunkblack theme from medik,
-Install to /EFI/CLOVER/themes/steampunkblack";
+"random_title" = "Случайная";
+"random_description" = "Случайный выбор темы из имеющихся. Зависит от скорости ветра.
+Установка будет выполнена в /EFI/CLOVER/themes/random.";
 
-"CloverThemeManager_title" = "CloverThemeManager.app";
-"CloverThemeManager_description" = "CloverThemeManager.app by blackosx,
-keeps your Themes up to date, remove or install them by choosing from a wide selection.
-Install to /Applications";
+"steampunkblack_title" = "SteamPunk Black";
+"steampunkblack_description" = "Тема по мотивам BootCamp от Bijo.
+Установка будет выполнена в /EFI/CLOVER/themes/steampunkblack";
+
+"CloverThemeManager_title" = "CloverThemeManager";
+"CloverThemeManager_description" = "Приложение CloverThemeManager от blackosx для управления Темами оформления.
+Установка будет выполнена в папку Программы.";
 // ============================================================================
 // RC Scripts
 // ----------------------------------------------------------------------------
-"rc.scripts.on.target_title" = "Установить системные RC скрипты на основной раздел";
-"rc.scripts.on.target_description" = "Установить все RC скрипты на целевой раздел.
-Раздел должен быть загрузочный OSX.";
-"rc.scripts.on.all.volumes_title" = "Установить скрипты на все остальные разделы";
-"rc.scripts.on.all.volumes_description" = "Установить RC скрипты на все внутренние загрузочные разделы OSX кроме целевово раздела.";
-"Optional RC Scripts" = "Добавочные RC скрипты";
-"disable_sleep_proxy_client_description" = "Запретить mDNSResponder sleep proxy client service. Это предотвращает просыпание системы каждый час";
+"rc.scripts.on.target_title" = "Системные RC-скрипты целевого раздела";
+"rc.scripts.on.target_description" = "Устанавливает системные скрипты на целевой раздел. Этот раздел должен быть загрузочным для macOS.";
+"rc.scripts.on.all.volumes_title" = "Системные RC-скрипты других разделов";
+"rc.scripts.on.all.volumes_description" = "Устанавливает RC-скрипты на все внутренние загрузочные разделы macOS, кроме целевого.";
+"OptionalRCScripts" = "Дополнительные RC-скрипты";
+"disable_sleep_proxy_client_title" = "Отключение Sleep Proxy Client";
+"disable_sleep_proxy_client_description" = "Отключает сервис Sleep Proxy Client для предотвращаения периодического пробуждения системы во время сна.";
 
 // ============================================================================
 // Clover Preference Pane
 // ----------------------------------------------------------------------------
-"CloverPrefpane_title" = "Установить контрольную панель Clover ";
-"CloverPrefpane_description" = "Установить контрольную панель на основной раздел.
-Включая программу оповещения об обновлениях Кловера.";
+"CloverPrefpane_title" = "Панель Настроек Clover";
+"CloverPrefpane_description" = "Устанавливает панель Clover в Системные настройки и программу оповещения об обновлениях CloverUpdater - в папку Программы целевого раздела.";
 
 // ----------------------------------------------------------------------------

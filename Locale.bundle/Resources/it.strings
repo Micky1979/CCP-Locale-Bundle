@@ -128,6 +128,7 @@
 "Window" = "Finestra";
 "Minimize" = "Contrai";
 "Zoom" = "Ridimenziona";
+"Float" = "Fluttua";
 
 "Bring All to Front" = "Porta tutto in primo piano";
 "Help" = "Aiuto";
@@ -334,6 +335,12 @@
 /* you are attempting to set a new config key with an empty array */
 "+ empty array to be filled" = "+ array vuoto che dovrai editare";
 
+/* you are attempting to set a new config key with an empty dictionary */
+"+ empty dictionary to be filled" = "+ dizionario vuoto che dovrai editare";
+
+/* you are attempting to set a new key/value example under ACPI->RenameDevices to be edited with your values (_SB.PCI0.RP02.PSXS = ARPT) */
+"+ ACPI->RenameDevices example to be edited" = "+ ACPI->RenameDevices esempio (da editare)";
+
 /* you are attempting to set a new dictionary under Devices->AddProperties to be filled with your values (Device, Key and Value) */
 "+ dictionary for DropTables to be filled (Signature, TableId (optional), Length (optional))" = "+ Dizionario per DropTables che dovrai editare (Signature, TableId (optional), Length (optional))";
 
@@ -406,6 +413,7 @@
 "Bad Root node" = "nodo Root errato";
 "Root node must be a Dictionary" = "Root deve avere \"Dizionario\" come tag";
 
+"Please edit with your real key/value and remove '#' at the beginning" = "Edita la chiave e valore inseriti con i tuoi dati reali e rimuovi '#' ad inizio riga";
 "value must be changed to a real one!" = "il valore deve essere cambiato con uno reale";
 "Signature is required, TableId and Length optionals" = "Signature è richiesto, TableId e Length sono optional";
 "Find/Replace required, Comment/Disabled optionals" = "Find/Replace richiesti, Comment/Disabled sono optional";
@@ -451,13 +459,11 @@
 "load config" = "carica config";
 
 /* Menu item in the Clover Manager, if pressed will open the Clover Installer for the selected disk */
-"open Clover Installer" = "Apri Clover Installer";
+"Install Clover boot loader" = "Installa Clover boot loader";
+"Install Clover's Extras only" = "Installa gli optionals di Clover";
 
 /* may be asked before the Clover's installer is shown */
 "Sorry you can't install Clover:\n\n- Un check \"Use your custom build..\" in the preferences.\n\n..or\n\n- build Clover!" = "Scusa ma non puoi installare Clover:\n\n- deseleziona \"Use i tuoi sorgenti di Clover..\" nelle Preferenze.\n\n..oppure\n\n- compila Clover!";
-
-/* may be asked before the Clover's installer is shown */
-"You can install Clover in this disk in UEFI mode,\nbut also in legacy mode (CloverEFI).\n\nIf you want to Install Clover in legacy mode and is the first time, ensure that one of boot0af or boot0ss, is selected:\n\nby desing only you decide if you want change your bootsectors and also because when this has already been done before, there is no reason to do so again.\n\nWARN:\nIf this is a supported Mac, please don't do that targeting an internal partition, but instead on an external disk. For the same reason don't install rc scripts on all volumes, but instead on the target only!" = "Qui Tu puoi installare Clover in UEFI ,\nma anche in modo legacy (Clover EFI).\n\nSe vuoi installare Clover in modo legacy, ed è la prima volta, assicurati che uno di boot0af o boot0ss siano selezionati:\n\ncome politica solo tu puoi decidere di modificare i settori di avvio del disco selezionato ed anche perchè se questo è già stato fatto una volta non c'è ragione per farlo ancora.\n\nATTENZIONE:\nSe questo è un Mac supportato, per favore non fare questo puntando ad un disco interno.. ma invece fallo su un disco esterno. Per lo stesso motivo non installare gli rc script su tutti i volumi, ma seleziona solo sul volume di destinazione!";
 
 /* may be asked before the Clover's installer is shown */
 "You can install only Clover's extras on this disk,\nbut not the bootloader due to filesystem incompatibility" = "Tu puoi installare solo gli accessori di Clover,\nma non il bootloader a causa del filesystem non compatibile";
@@ -500,7 +506,7 @@
 /* used in "4,1MB of 10,1MB (450KB/sec)" */
 "of" = "di";
 
-"Clover is ready to be downloaded,\n\nbut you can also use your custom build if you have one. I this case look at the preference's menu and specify the path to your src folder and Clover Configurator Pro never will ask you this!\n\nNote:\nAt the app menu you can select \"Build_Clover\" to build Clover from source with Build_Clover.command:\nrequire an active internet connection and Xcode installed.. and Clover will be always up to date!" = "Clover è pronto per essere scaricato,\n\ncomunque puoi usare i tuoi sorgenti compilati, se ti va, per installare Clover. In quest'ultimo caso apri il menu \"Preferenze\" e specifica la locazione dei sorgenti di Clover.. e questa app non ti chiederà più di fare il download di esso!\n\nNota:\nnel menù della app puoi selezionare \"Build_Clover\" per compilare Clover con Build_Clover.command:\nè richiesta una connessione internet e Xcode installato... e Clover sarà sempre aggiornato!";
+"Clover is ready to be downloaded,\n\nbut you can also use your custom build if you have one. I this case look at the preference's menu and specify the path to your src folder and Clover Configurator Pro never will ask you this!\n\nNote:\nAt the app menu you can select \"Build->Clover\" to build Clover from source:\nrequire an active internet connection and Xcode installed.. and Clover will be always up to date!" = "Clover è pronto per essere scaricato,\n\ncomunque puoi usare i tuoi sorgenti compilati, se ti va, per installare Clover. In quest'ultimo caso apri il menu \"Preferenze\" e specifica la locazione dei sorgenti di Clover.. e questa app non ti chiederà più di fare il download di esso!\n\nNota:\nnel menù della app puoi selezionare \"Build->Clover\" per compilarlo:\nè richiesta una connessione internet e Xcode installato... e Clover sarà sempre aggiornato!";
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -558,8 +564,14 @@
  Is a little label, please use a short description */
 "Max copies:" = "Max copie:";
 
-/* checkbox under the Preferences. If enabled (take effect on next run) the app will have a dark appearance */
-"Start in dark mode. Applied on next run." = "Avvia in dark mode. Applicato al prossimo riavvio";
+/* label under the Preferences. If enabled (take effect on next run) the app will have a dark appearance */
+"Appearance:" = "Aspetto:";
+
+/* label under the Preferences. If enabled (take effect on next run) the app will have a dark appearance */
+"dark" = "dark";
+
+/* label under the Preferences. If enabled (take effect on next run) the app will have a light appearance */
+"light" = "light";
 
 /* checkbox under the Preferences.
  If enabled the app can show notifications on the upper right corner to help the user with reminders
@@ -598,7 +610,59 @@
 /* message of the Alert that shown when you open the NVRAM editor  */
 "Clover Configurator Pro is able to set your NVRAM by editing the editor at the left side.\nOn the right side is what currently is on IODeviceTree/options (i.e. the NVRAM) and is not editable.\n\nLIMITATIONS:\nkeys like \"csr-active-config\" may be not editable due to the SIP settings. If that happens an alert will popup with an error after pressing the \"set\" button. To avoid that, temporarily disable SIP in recovery mode or set a permissive value in config.plist (RtVariables->CsrActiveConfig->). You can also skip it by mark as active \"ignore csr-active-config\" but anyway macOS can deny adding/setting or deleting other keys." = "Clover Configurator Pro può modificare la tua NVRAM utilizzando l'editor a sinistra.\nA destra puoi vedere cosa attualmente c'è in /IODeviceTree/options (cioè la NVRAM) ed è di sola lettura.\n\nLIMITAZIONI:\nChiavi come \"csr-active-config\" potrebbero essere non editabili perchè le impostazioni di SIP non lo permettono. Se questo accade una finestra di alert comparirà dopo che hai premuto il bottone \"setta\". Per evitare questo, disabilita temporaneamente SIP in recovery mode oppure setta un valore permissivo (+ alto) nel config.plist (RtVariables->CsrActiveConfig->). Puoi saltarla attivando \"ignora csr-active-config\" ma comunque macOS potrebbe negare di aggiungere/settare o cancellare altre chiavi protette da SIP.";
 
+// Kexts Installer -----------------------------------------------------------------------------------------------------------------------------------
+"Path:" = "Percorso:";
 
+"New OEM" = "Nuova OEM";
+
+"Drag kexts below:" = "Trascina i kexts qui sotto:";
+
+"Incompatible file or not a kext!" = "File incompatibile o non è un kext!";
+
+"This is a System file" = "Questo è un file di Sistema";
+
+"Repair permissions" = "Ripara i permessi";
+
+"Select & mount a disk:" = "Seleziona e monta un disco:";
+
+"move to the trash" = "sposta nel cestino";
+// ============================================================================
+// Clover installer
+// ----------------------------------------------------------------------------
+// following are missing from Clover packages:
+"drivers32_description" = "driver a 32 bit";
+
+"drivers64_description" = "driver a 64 bit";
+
+"drivers32UEFI_description" = "driver UEFI a 32 bit";
+
+"drivers64UEFI_description" = "driver UEFI a 64 bit";
+
+"Clover_description" = "Loaders di Clover e driver obbligatori.";
+
+"apfs_description" = "Driver per il filesystem APFS (10.13+).";
+
+"FAT_description" = "Driver per il filesystem FAT32.\nClover già ne ha uno incluso.. ma questo potrebbe essere più aggiornato.";
+
+"GrubEXFAT_description" = "Driver (Grub) per il filesystem EXFAT";
+
+"HFSPlus_description" = "Driver lettura/scrittura per il filesystem HFS+ (sostituisce le varianti VBoxHfs che dovrebbero essere rimosse o disabilitate in \"DisableDrivers\").";
+
+"GrubNTFS_description" = "Driver (GRUB) per il filesystem NTFS (Ci sono le varianti estratte e ufficiali, usane solo uno).";
+
+"GrubUDF_description" = "Driver (GRUB) per il filesystem UDF (Universal Disk Format per CD/DVD).";
+
+"NvmExpressDxe_description" = "Driver per i dischi NVME.";
+
+"NTFS_description" = "Driver per il filesystem (sostituisce GrubNTFS, usane solo uno).";
+
+"AptioInputFix_description" = "Driver di riferimento per ridurre i protocolli proprietari di mouse e tastiera AMI APTIO e per il supporto dell'input della GUI di File Vault 2.\nhttps://github.com/vit9696/AptioFixPkg.";
+
+"OsxFatBinaryDrv_description" = "Driver obbligatorio fino macOS 10.8 (non c'è bisogno se boot.efi è solamente a 64 invece di 32-64).";
+
+"OsxAptioFix2Drv_description" = "OsxAptioFix2Drv è una versione ridotta di OsxAptioFixDrv senza \"relocation blocks\" che potrebbe non lavorare su alcuni hardware o con vecchie versioni dei Sistemi Operativi. Comunque questa versione supporta l'Ibernazione al contrario del primo. Non avrai supporto NVRAM e dovrai ricorrere agli Rc Scripts + EmuVariableUefi-64.efi.";
+
+"OsxAptioFix3Drv_description" = "OsxAptioFix3Drv è sostanzialmente OsxAptioFix2Drv rinominato partendo dalla revisione 4369.\nQuesta versione ha il supporto all'NVRAM più alcuni fix. Questa versione potrebbe essere sviluppata ulteriormente in Clover.";
 
 // Following coming directly from Clover source so if already in your language
 // please leave as is!
@@ -670,59 +734,103 @@ Premi il tasto 6 per boot6 = Clover EFI 64bit boot.";
 // ----------------------------------------------------------------------------
 "CloverEFI_title" = "CloverEFI";
 "CloverEFI_description" = "Selezionare la versione di CloverEFI da installare.";
-"cloverEFI.32_title" = "CloverEFI 32-bit";
-"cloverEFI.32_description" = "CloverEFI 32-bit";
+"cloverEFI.32_title" = "CloverEFI 32-bits";
+"cloverEFI.32_description" = "CloverEFI 32-bits";
 "cloverEFI.64.sata_title" = "CloverEFI 64-bit SATA";
 "cloverEFI.64.sata_description" = "CloverEFI 64-bit che utilizza interfaccia SATA per accedere alle unità";
 "cloverEFI.64.blockio_title" = "CloverEFI 64-bit BiosBlockIO";
 "cloverEFI.64.blockio_description" = "CloverEFI 64-bit che utilizza Bios Block I/O per accedere alle unità.
 Necessario anche per accedere ad unità che utilizzano controller RAID, JMicron, NForce ed altri controller SATA/ATA/SCSI di terze parti.";
-"cloverEFI.64.blockio2_title" = "CloverEFI 64-bits BiosBlockIO for NVIDIA NForce MCP79";
-"cloverEFI.64.blockio2_description" = "CloverEFI 64-bits using Bios Block I/O to access drives for chipset NVIDIA NForce MCP79";
+"cloverEFI.64.blockio2_title" = "CloverEFI 64-bit BiosBlockIO";
+"cloverEFI.64.blockio2_description" = "CloverEFI 64-bit che utilizza Bios Block I/O per accedere alle unità.
+Necessario anche per accedere ad unità che utilizzano controller RAID, JMicron, NForce ed altri controller SATA/ATA/SCSI di terze parti.";
 
 // ============================================================================
 // Drivers
 // ----------------------------------------------------------------------------
+
 "Ps2KeyboardDxe-32_description" = "Driver a 32 bit per tastiere PS/2";
 "Ps2MouseAbsolutePointerDxe-32_description" = "Driver a 32 bit per trackpad PS/2";
 "Ps2MouseDxe-32_description" = "Driver a 32 bit per mouse PS/2";
-"Ps2MouseDxe-64_description" = "Driver a 64 bit per mouse PS/2";
 "UsbMouseDxe-32_description" = "Driver a 32 bit per mouse USB";
-"UsbMouseDxe-64_description" = "Driver a 64 bit per mouse USB";
 "VBoxExt2-32_description" = "Driver a 32 bit per accedere a partizioni formattate in ext2/3";
-"VBoxExt2-64_description" = "Driver a 64 bit per accedere a partizioni formattate in ext2/3";
 "VBoxExt4-32_description" = "Driver a 32 bit per accedere a partizioni formattate in ext4";
-"VBoxExt4-64_description" = "Driver a 64 bit per accedere a partizioni formattate in ext4";
 "XhciDxe-32_description" = "Driver a 32 bit che aggiunge supporto USB 3.0";
-"XhciDxe-64_description" = "Driver a 64 bit che aggiunge supporto USB 3.0";
-"CsmVideoDxe-64_description" = "Driver video a 64 bit per l'interfaccia grafica utente (GUI) di Clover che permette di scegliere più risoluzioni.
+
+"Drivers64_title" = "BIOS Drivers, 64 bit";
+"Drivers64_description" = "Seleziona drivers per buttare da BIOS";
+
+"Drivers64FV2_title" = "BIOS Drivers per FileVault 2, 64 bit";
+"Drivers64FV2_description" = "Seleziona i drivers for BIOS-booting con FileVault2.";
+
+"ApfsDriverLoader-64_description" = "Supporto per il driver del filesystem APFS incluso nel contenitore di macOS 10.14.";
+"AppleImageCodec-64_description" = "Decodifica PNG e BMP per FileVault2.";
+"AppleImageLoader-64_description" = "Assicura il driver binario AppleEfiFat con l’implementazione del protocollo AppleLoadImage e con la verifica della firma EfiBinary.";
+"AppleKeyAggregator-64_description" = "Supporto per il boot UI dialog di FileVault2.";
+"AppleKeyFeeder-64_description" = "Supporto per tastiere PS/2 da usare con FileVault2";
+"AppleUISupport-64_description" = "Set di protocolli per supportare EfiLoginUi di FileVault.";
+"AppleUITheme-64_description" = "Crea il supporto boot UI Themes perFileVault2.";
+"AptioInputFix-64_description" = "Driver che risolve i problemi di input nei firmware UEFI come AMI Aptio.";
+"AptioMemoryFix-64_description" = "Driver a 64 bit preferito che risolve i problemi di memoria sul firmware UEFI come AMI Aptio bios.";
+"FirmwareVolume-64_description" = "Crea il FirmwareVolume con ‘cursor images’ per FileVault2.";
+"FSInject-64_description" = "Abilita l’iniezione di estensioni del kernel dalle cartelle di Clover.";
+"GrubEXFAT-64_description" = "Driver GRUB per il filesystem ExFAT.";
+"GrubISO9660-64_description" = "Driver GRUB per il filesystem ISO9600.";
+"GrubNTFS-64_description" = "Driver GRUB per il filesystem NTFS.";
+"GrubUDF-64_description" = "Driver GRUB per il filesystem UDF.";
+"SMCHelper-64_description" = "Ripristina le chiavi SMC lasciate nell’NVRAM da FakeSMC.";
+"XhciDxe-64_description" = "Driver USB 3.0, 64bit";
+
+"Drivers64UEFI_title" = "Drivers UEFI";
+"Drivers64UEFI_description" = "Seleziona drivers per UEFI-booting.";
+
+"Drivers64UEFIFV2_title" = "Drivers UEFI per FileVault 2";
+"Drivers64UEFIFV2_description" = "Seleziona i drivers per UEFI-booting con FileVault 2.";
+
+"ApfsDriverLoader-64.UEFI_description" = "Supporto per il driver del filesystem APFS incluso nel contenitore di macOS 10.14.";
+"AppleEvent-64.UEFI_description" = "Crea il protocollo AppleEvent per FileVault2.";
+"AppleGraphicsConfig-64.UEFI_description" = "Crea il protocollo opzionale AppleGraphicsConfig.";
+"AppleImageCodec-64.UEFI_description" = "Decodifica PNG e BMP per FileVault2.";
+"AppleImageLoader-64.UEFI_description" = "Assicura il driver binario AppleEfiFat con l’implementazione del protocollo AppleLoadImage e con la verifica della firma EfiBinary.";
+"AppleKeyAggregator-64.UEFI_description" = "Supporto per il boot UI dialog di FileVault2.";
+"AppleKeyFeeder-64.UEFI_description" = "Supporto per tastiere PS/2 da usare con FileVault2";
+"AppleUISupport-64.UEFI_description" = "Set di protocolli per supportare EfiLoginUi di FileVault.";
+"AppleUITheme-64.UEFI_description" = "Crea il supporto boot UI Themes perFileVault2.";
+"AptioInputFix-64.UEFI_description" = "Driver che risolve i problemi di input nei firmware UEFI come AMI Aptio.";
+"AptioMemoryFix-64.UEFI_description" = "Driver a 64 bit preferito che risolve i problemi di memoria sul firmware UEFI come AMI Aptio bios.";
+"CsmVideoDxe-64.UEFI_description" = "Driver video a 64 bit per l'interfaccia grafica utente (GUI) di Clover che permette di scegliere più risoluzioni.
 Basato sul modulo CSM (Compatibility Support Module) dell UEFI BIOS e richiede che il CSM sia attivato.
 Clover potrebbe non avviarsi correttamente con questo driver o potrebbe causare problemi durante la fase di sonno/risveglio!
 Usare con cautela!";
-"DataHubDxe-64_description" = "Driver a 64 bit aggiunge supporto al protocollo DataHub necessario per MacOSX.
+"DataHubDxe-64.UEFI_description" = "Driver a 64 bit aggiunge supporto al protocollo DataHub necessario per MacOSX.
 Questo protocollo è già presente nella maggior parte dei casi, ma può mancare in determinate configurazioni. In questo caso si dovrebbe ricevere un avviso sullo schermo.";
-"EmuVariableUefi-64_description" = "Driver a 64bit per il supporto delle variabili NVRAM necessarie per MacOSX.
+"EmuVariableUefi-64.UEFI_description" = "Driver a 64bit per il supporto delle variabili NVRAM necessarie per MacOSX.
 La maggior parte dei firmware UEFI utilizzano hardware NVRAM, ma in rari casi è necessario il driver.
 Usare solo se si ha un problema senza di questo driver.";
-"OsxAptioFixDrv-64_description" = "Driver a 64 bit che risolve i problemi di memoria sul firmware UEFI come AMI Aptio bios.";
-"AptioMemoryFix_description" = "Driver a 64 bit che risolve i problemi di memoria sul firmware UEFI come AMI Aptio bios.";
-"OsxLowMemFixDrv-64_description" = "Driver a 64 bit che permette, durante l'avvio UEFI, di riallocare gli indirizzi per boot.efi e quindi di avviare correttamente OS X Mountain Lion (10.8). E' una variante semplificata di OsxAptioFixDrv (non utilizzare entrambi insieme).";
-"PartitionDxe-64_description" = "Driver a 64 bit che aggiunge supporto a tabelle di partizione non comuni come: GPT/MBR ibrido o Mappa Partizione Apple.";
-"SMCHelper-64_description" = "Restore SMC keys left in nvram by FakeSMC";
-"AppleEvent-64_description" = "Create AppleEvent protocol for FileVault2";
-"AppleKeyAggregator-64_description" = "Support for boot UI dialog for FileVault2";
-"FirmwareVolume-64_description" = "Create FirmwareVolume with cursor images";
-"AppleImageCodec-64_description" = "For decode PNG and BMP images in boot UI";
-"AppleUITheme-64_description" = "Create boot UI Themes support";
-"HashServiceFix-64_description" = "Fix Hash support if absent in native UEFI BIOS";
-"UsbKbDxe-64_description" = "Keyboard driver for boot UI support";
-"AppleGraphicsConfig-64_description" = "Create optional AppleGraphicsConfig protocol";
-
+"EnglishDxe-64.UEFI_description" = "Supporto per il protocollo UnicodeCollation usato nell’EFI Shell se manca nel firmware UEFI.";
+"Fat-64.UEFI_description" = "Driver per il filesystem FAT.";
+"FirmwareVolume-64.UEFI_description" = "Crea il FirmwareVolume con ‘cursor images’ per FileVault2.";
+"FSInject-64.UEFI_description" = "Abilita l’iniezione di estensioni del kernel dalle cartelle di Clover.";
+"HashServiceFix-64.UEFI_description" = "Risolve il support Hash se assente ne BIOS UEFI nativo.";
+"HFSPlus.UEFI_description" = "Driver alternativo per il filesystem HFS+.";
+"NvmExpressDxe-64.UEFI_description" = "Driver per il supporto ai devices NVM Express.";
+"OsxAptioFix3Drv-64.UEFI_description" = "Driver alternativo (v3) per risolvere i problemi di memoria nei firmware UEFI. Da non usare con altri driver di tipo AptioFix insieme.";
+"OsxAptioFixDrv-64.UEFI_description" = "Vecchio driver  per risolvere i problemi di memoria nei firmware UEFI come AMI Aptio. Da non usare con altri driver di tipo AptioFix insieme.";
+"OsxFatBinaryDrv-64.UEFI_description" = "Driver per supporto dei binari FAT (32/64 bit) usato in 10.9 e precedenti.";
+"OsxLowMemFixDrv-64.UEFI_description" = "Driver a 64 bit che permette, durante l'avvio UEFI, di riallocare gli indirizzi per boot.efi e quindi di avviare correttamente OS X Mountain Lion (10.8). E' una variante semplificata di OsxAptioFixDrv (non utilizzare entrambi insieme).";
+"PartitionDxe-64.UEFI_description" = "Driver a 64 bit che aggiunge supporto a tabelle di partizione non comuni come: GPT/MBR ibrido o Mappa Partizione Apple.";
+"Ps2MouseDxe-64.UEFI_description" = "Driver a 64 bit per mouse PS/2";
+"SMCHelper-64.UEFI_description" = "Ripristina le chiavi SMC lasciate nell’NVRAM da FakeSMC.";
+"UsbKbDxe-64.UEFI_description" = "Driver della tastiera per il supporto boot UI.";
+"UsbMouseDxe-64.UEFI_description" = "Driver a 64 bit per mouse USB";
+"VBoxExt2-64.UEFI_description" = "Driver a 64 bit per accedere a partizioni formattate in ext2/3";
+"VBoxExt4-64.UEFI_description" = "Driver a 64 bit per accedere a partizioni formattate in ext4";
+"VBoxHfs-64.UEFI_description" = "Driver per il filesystem HFS+.";
+"VBoxIso9600-64.UEFI_description" = "Driver per il filesystem ISO 9600.";
 
 // ============================================================================
 // Themes
 // ----------------------------------------------------------------------------
-
 "Themes_title" = "Temi";
 "Themes_description" = "Seleziona per installare i temi.";
 
@@ -738,18 +846,23 @@ Installa in /EFI/CLOVER/themes/embedded";
 "metal_description" = "Tema originale metal di Slice,
 Installa in /EFI/CLOVER/themes/metal";
 
+"clovy_title" = "Clovy";
+"clovy_description" = "Vector SVG theme from Clovy,
+Install to /EFI/CLOVER/themes/Clovy";
+
 "random_title" = "Random";
-"random_description" = "Tema Random di Slice,
-Installa in /EFI/CLOVER/themes/random";
+"random_description" = "random theme,
+Install to /EFI/CLOVER/themes/random choose a theme from others";
 
 "steampunkblack_title" = "Steampunkblack";
 "steampunkblack_description" = "Tema Steampunkblack di Bijo,
 Installa in /EFI/CLOVER/themes/steampunkblack";
 
-"CloverThemeManager_title" = "CloverThemeManager.app";
-"CloverThemeManager_description" = "CloverThemeManager.app by blackosx,
-keeps your Themes up to date, remove or install them by choosing from a wide selection.
-Install to /Applications";
+"CloverThemeManager_title" = "CloverThemeManager.app by blackosx,
+mantiene i temi di Clover aggiornati, puoi rimuoverli o installarli scegliendo tra una vasta selezione.
+App installata in  /Applications.";
+"CloverThemeManager_description" = "CloverThemeManager.app by blackosx tiene i tuoi temi aggiornati, li rimuove o li installa scegliendo da una grande selezione.
+Installa in /Applications";
 // ============================================================================
 // RC Scripts
 // ----------------------------------------------------------------------------
@@ -758,7 +871,8 @@ Install to /Applications";
 Il volume di destinazione deve essere un volume OSX avviabile.";
 "rc.scripts.on.all.volumes_title" = "Script RC su tutti gli altri volumi OSX avviabili";
 "rc.scripts.on.all.volumes_description" = "Installa tutti gli script RC su tutti i volumi interni OSX avviabili oltre al volume di destinazione.";
-"Optional RC Scripts" = "Script RC Opzionali";
+"OptionalRCScripts" = "Script RC Opzionali";
+"disable_sleep_proxy_client_title" = "Disabilita il servizio sleep proxy client";
 "disable_sleep_proxy_client_description" = "Script che disabilita il servizio BONJOUR (sleep proxy client). Eviterà che il sistema, in caso di standby, si risvegli a tutte le  ore.";
 
 // ============================================================================
